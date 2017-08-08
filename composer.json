@@ -1,0 +1,14 @@
+{
+    "name": "simplecov/spa",
+    "description": "SPA site by simplecov",
+    "type": "project",
+    "license": "none",
+    "authors": [
+        {
+            "name": "Alexey Abrosimov",
+            "email": "simplecov@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
