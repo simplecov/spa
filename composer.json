@@ -10,7 +10,12 @@
         }
     ],
     "minimum-stability": "dev",
+    "extra": {
+        "installer-paths": {
+            "local/modules/{$name}/": ["type:bitrix-module"]
+        }
+    },
     "require": {
-        "phpmailer/phpmailer": "dev-master"
+        "andreyryabin/sprint.migration": "dev-master"
     }
 }
