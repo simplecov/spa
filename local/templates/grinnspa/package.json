@@ -1,0 +1,14 @@
+{
+  "name": "simplecov",
+  "version": "1.0.0",
+  "description": "Grinn SPA",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "compass": "^0.1.1",
+    "jquery": "^3.2.1",
+    "webpack": "^3.5.4"
+  }
+}

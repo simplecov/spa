@@ -16,6 +16,11 @@ $asset = Bitrix\Main\Page\Asset::getInstance();
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/angular-route.min.js')?>
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/tether.min.js')?>
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/bootstrap.min.js')?>
+
+        <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/plugins/jquery.ba-cond.min.js')?>
+        <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/plugins/jquery.slitslider.js')?>
+        <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/plugins/modernizr.custom.79639.js')?>
+
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/app.js')?>
 
 	</head>
