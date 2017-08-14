@@ -12,14 +12,6 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<ul class="cb-slideshow">
-    <li>
-        <span>Image 01</span>
-        <div>
-            <h3>re·lax·a·tion</h3>
-        </div>
-    </li>
-</ul>
 <div class="header-big-slider">
     <?foreach($arResult["ITEMS"] as $arItem):
     $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));

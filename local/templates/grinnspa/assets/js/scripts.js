@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-    $('.header-big-slider').superslides({
-
-    });
+    console.log($(window).height());
 
 });

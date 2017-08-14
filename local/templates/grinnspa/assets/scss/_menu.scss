@@ -1,0 +1,33 @@
+.main-menu{
+  position: absolute;
+  width: 100%;
+  display: block;
+  text-align: left;
+  background: $menu-black;
+  padding: 15px;
+  max-height: 60px;
+  top: 100%;
+  margin: 0;
+
+  li{
+    list-style-type: none;
+    display: inline-block;
+
+    a{
+      color: black;
+      font-family: 'DINPro-Regular';
+      padding: 0 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.underline{
+  position: absolute;
+  bottom: 0;
+}

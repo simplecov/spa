@@ -1,0 +1,23 @@
+.header-container{
+  position: relative;
+
+  .header-media{
+    padding: 10px;
+    height: 100px;
+    display: flex;
+    position: relative;
+  }
+  
+  .logo{
+    position: relative;
+    margin: auto 0;
+    float: left;
+  }
+}
+
+#menu-opener{
+  float: right;
+  margin: auto 0;
+  flex: 1;
+  text-align: right;
+}

@@ -6641,6 +6641,66 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important; } }
 
+@font-face {
+  font-family: 'DINPro-Regular';
+  src: url("DINPro-Regular.eot");
+  src: url("assets/fonts/DINPro-Regular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINPro-Regular.woff2") format("woff2"), url("assets/fonts/DINPro-Regular.woff") format("woff"), url("assets/fonts/DINPro-Regular.svg#DINPro-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-0491; }
+@font-face {
+  font-family: 'DINPro-Bold';
+  src: url("CondensedBold.eot");
+  src: url("assets/fonts/CondensedBold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/CondensedBold.woff2") format("woff2"), url("assets/fonts/CondensedBold.woff") format("woff"), url("assets/fonts/CondensedBold.svg#o CondensedBold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: condensed;
+  unicode-range: U+0020-04EF; }
+.header-container {
+  position: relative; }
+  .header-container .header-media {
+    padding: 10px;
+    height: 100px;
+    display: flex;
+    position: relative; }
+  .header-container .logo {
+    position: relative;
+    margin: auto 0;
+    float: left; }
+
+#menu-opener {
+  float: right;
+  margin: auto 0;
+  flex: 1;
+  text-align: right; }
+
+.main-menu {
+  position: absolute;
+  width: 100%;
+  display: block;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  max-height: 60px;
+  top: 100%;
+  margin: 0; }
+  .main-menu li {
+    list-style-type: none;
+    display: inline-block; }
+    .main-menu li a {
+      color: black;
+      font-family: 'DINPro-Regular';
+      padding: 0 10px;
+      font-size: 14px;
+      text-transform: uppercase; }
+      .main-menu li a:hover {
+        text-decoration: none; }
+
+.underline {
+  position: absolute;
+  bottom: 0; }
+
 body {
   position: relative; }
 
