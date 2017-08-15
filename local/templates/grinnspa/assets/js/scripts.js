@@ -5,8 +5,8 @@ $(document).ready(function(){
     console.log(menuToggler.selector);
 
     $('#menu-opener').on('click', function(){
+        $('#nav-icon3').toggleClass('open');
         menuToggler.openToggler(menuToggler.selector, menuToggler.procClass);
-        //$(menuToggler.selector).toggleClass(menuToggler.procClass);
     });
 
 });
@@ -14,6 +14,8 @@ $(document).ready(function(){
 var menuToggler = {
 
     selector: null,
+    headerSelector: '.header-media',
+    resizedHeaderClass: 'resized',
     procClass: 'main-menu-shown',
 
     /**
@@ -52,6 +54,11 @@ var menuToggler = {
     openToggler: function(selector, newClass)
     {
         $(selector).toggleClass(newClass);
+
+        if($(selector).hasClass(newClass))
+            $(this.headerSelector).addClass(this.resizedHeaderClass);
+        else
+            $(this.headerSelector).removeClass(this.resizedHeaderClass);
     }
 
 };

@@ -39,7 +39,14 @@ $asset = Bitrix\Main\Page\Asset::getInstance();
                     <img src="<?=SITE_TEMPLATE_PATH?>/assets/images/spa-logo.png">
                 </div>
 
-                <a id="menu-opener" href="#" data-target="main-menu">Меню</a>
+                <a id="menu-opener" href="#" data-target="main-menu">
+                    <div id="nav-icon3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
             </div>
 
             <?$APPLICATION->IncludeComponent("bitrix:menu", "spa-template", Array(
