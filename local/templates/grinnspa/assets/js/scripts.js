@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+    $('body').niceScroll({
+        scrollspeed: 150,
+        cursorborder: 0,
+    });
+
     header.init();
 
     header.showHideElementOnScroll('#menu-opener', 50, true);
@@ -48,6 +53,7 @@ var header = {
     init: function()
     {
         this.target($('#menu-opener'));
+        //this.customScrollAnimation();
     },
 
 
@@ -130,10 +136,30 @@ var header = {
         );
     },
 
+    /**
+     * Change element offset
+     * @param selector1
+     * @param selector2
+     */
     changeElementOffset: function(selector1, selector2)
     {
         var height = eval($(selector1).offset().top);
             $(selector2).offset({top: height});
+    },
+
+    /**
+     * Smooth window scroll
+     */
+    customScrollAnimation: function()
+    {
+        $(document).bind( 'mousewheel', function (e) {
+            var nt = $(document.body).scrollTop()-(e.deltaY*e.deltaFactor*100);
+            e.preventDefault();
+            e.stopPropagation();
+            $(document.body).stop().animate( {
+                scrollTop : nt
+            } , 500 , 'easeInOutCubic' );
+        } )
     }
 
 };
