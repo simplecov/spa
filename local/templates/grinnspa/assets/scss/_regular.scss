@@ -23,6 +23,9 @@ section{
   color: $regular-btn-textColor;
   height: $regular-btn-size;
   width: $regular-btn-size;
+
+  margin-top: calc(#{$regular-btn-size } * .3);
+
   line-height: $regular-btn-size;
   font-size: $regular-btn-fontSize;
   display: inline-block;

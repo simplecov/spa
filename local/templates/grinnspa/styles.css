@@ -9214,6 +9214,7 @@ section {
   color: white;
   height: 70px;
   width: 70px;
+  margin-top: calc(70px * .3);
   line-height: 70px;
   font-size: 16px;
   display: inline-block;
@@ -9500,5 +9501,18 @@ Beauty open\close toggler animation
 .underline {
   position: absolute;
   bottom: 0; }
+
+.main-page-services .card {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border-color: #003465; }
+  .main-page-services .card .card-img-top {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+  .main-page-services .card .card-block .card-text {
+    height: 70px;
+    overflow: hidden; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,28 @@
+.main-page-services{
+
+  .card{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+    border-color: $main-color1;
+
+    .card-img-top{
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+
+    .card-block{
+
+      .card-title{
+
+      }
+
+      .card-text{
+        height: 70px;
+        overflow: hidden;
+      }
+    }
+  }
+}
