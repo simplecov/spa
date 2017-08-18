@@ -1,0 +1,41 @@
+@mixin pulse-keyframe($name, $color, $size, $time, $animation)
+{
+
+  -webkit-animation: #{$name} #{$time}s infinite $animation;
+  -moz-animation: #{$name} #{$time}s infinite $animation;
+  -ms-animation: #{$name} #{$time}s infinite $animation;
+  animation: #{$name} #{$time}s infinite $animation;
+
+  @-webkit-keyframes #{$name} {
+    from{
+      box-shadow: 0 0 0 0px $color;
+    }
+    to {
+      box-shadow: 0 0 0 #{$size}px transparentize($color, 1);
+    }
+  }
+  @-moz-keyframes #{$name} {
+    from{
+      box-shadow: 0 0 0 0px $color;
+    }
+    to {
+      box-shadow: 0 0 0 #{$size}px transparentize($color, 1);
+    }
+  }
+  @-ms-keyframes #{$name} {
+    from{
+      box-shadow: 0 0 0 0px $color;
+    }
+    to {
+      box-shadow: 0 0 0 #{$size}px transparentize($color, 1);
+    }
+  }
+  @keyframes #{$name} {
+    from{
+      box-shadow: 0 0 0 0px $color;
+    }
+    to {
+      box-shadow: 0 0 0 #{$size}px transparentize($color, 1);
+    }
+  }
+}

@@ -9208,6 +9208,80 @@ section {
     background: #003465;
     color: white; }
 
+.btn-pulse {
+  background: #003465;
+  color: white;
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+  font-size: 17px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+  .btn-pulse:hover {
+    color: white;
+    text-decoration: none;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none; }
+  .btn-pulse.blue {
+    background: #003465;
+    -webkit-animation: pulse-blue 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse-blue 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse-blue 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse-blue 2.25s infinite cubic-bezier(0.66, 0, 0, 1); }
+@-webkit-keyframes pulse-blue {
+  from {
+    box-shadow: 0 0 0 0px #003465; }
+  to {
+    box-shadow: 0 0 0 15px rgba(0, 52, 101, 0); } }
+@-moz-keyframes pulse-blue {
+  from {
+    box-shadow: 0 0 0 0px #003465; }
+  to {
+    box-shadow: 0 0 0 15px rgba(0, 52, 101, 0); } }
+@-ms-keyframes pulse-blue {
+  from {
+    box-shadow: 0 0 0 0px #003465; }
+  to {
+    box-shadow: 0 0 0 15px rgba(0, 52, 101, 0); } }
+@keyframes pulse-blue {
+  from {
+    box-shadow: 0 0 0 0px #003465; }
+  to {
+    box-shadow: 0 0 0 15px rgba(0, 52, 101, 0); } }
+  .btn-pulse.red {
+    background: #e00920;
+    -webkit-animation: pulse-red 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse-red 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse-red 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse-red 2.25s infinite cubic-bezier(0.66, 0, 0, 1); }
+@-webkit-keyframes pulse-red {
+  from {
+    box-shadow: 0 0 0 0px #e00920; }
+  to {
+    box-shadow: 0 0 0 15px rgba(224, 9, 32, 0); } }
+@-moz-keyframes pulse-red {
+  from {
+    box-shadow: 0 0 0 0px #e00920; }
+  to {
+    box-shadow: 0 0 0 15px rgba(224, 9, 32, 0); } }
+@-ms-keyframes pulse-red {
+  from {
+    box-shadow: 0 0 0 0px #e00920; }
+  to {
+    box-shadow: 0 0 0 15px rgba(224, 9, 32, 0); } }
+@keyframes pulse-red {
+  from {
+    box-shadow: 0 0 0 0px #e00920; }
+  to {
+    box-shadow: 0 0 0 15px rgba(224, 9, 32, 0); } }
 .header-container {
   position: absolute;
   width: 100%;

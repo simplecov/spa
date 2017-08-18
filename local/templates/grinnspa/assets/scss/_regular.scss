@@ -16,3 +16,42 @@ section{
 
   }
 }
+
+
+.btn-pulse{
+  background: $regular-btn-blue;
+  color: white;
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+  font-size: 17px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    color: white;
+    text-decoration: none;
+
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+  }
+
+  &.blue{
+    background: $regular-btn-blue;
+    @include pulse-keyframe(pulse-blue, $regular-btn-blue, 15, 2.25, cubic-bezier(0.66, 0, 0, 1));
+  }
+
+  &.red{
+    background: $regular-btn-red;
+    @include pulse-keyframe(pulse-red, $regular-btn-red, 15, 2.25, cubic-bezier(0.66, 0, 0, 1));
+  }
+}
