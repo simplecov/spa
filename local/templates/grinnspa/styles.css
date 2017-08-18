@@ -9209,20 +9209,32 @@ section {
     color: white; }
 
 .btn-pulse {
+  position: relative;
   background: #003465;
   color: white;
-  height: 80px;
-  width: 80px;
-  line-height: 80px;
-  font-size: 17px;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  font-size: 16px;
   display: inline-block;
-  border-radius: 50%;
   text-align: center;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
+  transition: all .3s ease-in-out;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+  .btn-pulse span {
+    display: inline-block;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
   .btn-pulse:hover {
     color: white;
     text-decoration: none;
@@ -9230,6 +9242,14 @@ section {
     -moz-animation: none;
     -ms-animation: none;
     animation: none; }
+  .btn-pulse:focus, .btn-pulse:active, .btn-pulse:visited {
+    color: white;
+    outline: 0 !important; }
+  .btn-pulse.round {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 80%; }
   .btn-pulse.blue {
     background: #003465;
     -webkit-animation: pulse-blue 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
@@ -9256,6 +9276,10 @@ section {
     box-shadow: 0 0 0 0px #003465; }
   to {
     box-shadow: 0 0 0 15px rgba(0, 52, 101, 0); } }
+    .btn-pulse.blue:hover {
+      -webkit-animation: none;
+      -o-animation: none;
+      animation: none; }
   .btn-pulse.red {
     background: #e00920;
     -webkit-animation: pulse-red 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
@@ -9282,6 +9306,11 @@ section {
     box-shadow: 0 0 0 0px #e00920; }
   to {
     box-shadow: 0 0 0 15px rgba(224, 9, 32, 0); } }
+    .btn-pulse.red:hover {
+      -webkit-animation: none;
+      -o-animation: none;
+      animation: none; }
+
 .header-container {
   position: absolute;
   width: 100%;

@@ -17,16 +17,15 @@ section{
   }
 }
 
-
 .btn-pulse{
+  position: relative;
   background: $regular-btn-blue;
-  color: white;
-  height: 80px;
-  width: 80px;
-  line-height: 80px;
-  font-size: 17px;
+  color: $regular-btn-textColor;
+  height: $regular-btn-size;
+  width: $regular-btn-size;
+  line-height: $regular-btn-size;
+  font-size: $regular-btn-fontSize;
   display: inline-block;
-  border-radius: 50%;
   text-align: center;
 
   -webkit-transition: all .3s ease-in-out;
@@ -35,14 +34,41 @@ section{
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+  span{
+    display: inline-block;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
   &:hover{
-    color: white;
+    color: $regular-btn-textColor;
     text-decoration: none;
 
     -webkit-animation: none;
     -moz-animation: none;
     -ms-animation: none;
     animation: none;
+  }
+
+  &:focus, &:active, &:visited{
+    color: $regular-btn-textColor;
+    outline: 0 !important;
+  }
+
+  &.round{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 80%;
   }
 
   &.blue{

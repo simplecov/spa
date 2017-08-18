@@ -38,4 +38,10 @@
       box-shadow: 0 0 0 #{$size}px transparentize($color, 1);
     }
   }
+
+  &:hover{
+    -webkit-animation: none;
+    -o-animation: none;
+    animation: none;
+  }
 }
