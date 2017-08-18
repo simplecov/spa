@@ -42,11 +42,16 @@
     list-style-type: none;
     display: inline-block;
 
+    &:first-child a{
+      padding: 0 10px 0 0;
+    };
+
     a{
-      color: black;
+      color: $menu-text-color;
       font-family: 'DINPro-Regular';
       padding: 0 10px;
       font-size: 14px;
+      font-weight: 800;
       text-transform: uppercase;
 
       &:hover{

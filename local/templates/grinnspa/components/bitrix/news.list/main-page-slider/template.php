@@ -20,9 +20,7 @@ $this->setFrameMode(true);
     ?>
 
         <div class="slider-item" id="<?=$id?>">
-            <div class="image">
-                <img src="<?=$arItem['IMAGE']?>">
-            </div>
+            <div class="image" style="background-image: url(<?=$arItem['IMAGE']?>);  background-size: cover; background-repeat: no-repeat; height: 100vh;"></div>
         </div>
 
     <?endforeach?>
