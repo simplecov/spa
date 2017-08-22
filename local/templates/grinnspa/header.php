@@ -17,6 +17,7 @@ $asset = Bitrix\Main\Page\Asset::getInstance();
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/bootstrap.min.js')?>
 
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/plugins/jquery.nicescroll.min.js')?>
+        <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/plugins/jquery.visible.min.js')?>
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/plugins/slick.js')?>
 
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/scripts.js')?>

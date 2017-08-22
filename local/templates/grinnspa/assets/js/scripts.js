@@ -7,8 +7,11 @@ $(document).ready(function(){
 
     header.init();
 
+    header.changeElementOffset('.logo', '#menu-opener');
+
     header.showHideElementOnScroll('#menu-opener', 50, true);
     header.showHideElementOnScroll('.to-top-button', 100, false);
+
     $(window).scroll(function(){
         header.showHideElementOnScroll('#menu-opener', 50, true);
         header.showHideElementOnScroll('.to-top-button', 100, false);
@@ -22,8 +25,6 @@ $(document).ready(function(){
         $('#nav-icon3').toggleClass('open');
         header.openToggler(header.selector, header.procClass);
     });
-
-    header.changeElementOffset('.logo', '#menu-opener');
 
 
     /**
@@ -53,7 +54,7 @@ var header = {
     init: function()
     {
         this.target($('#menu-opener'));
-        //this.customScrollAnimation();
+        this.animatedTitle($('.stylish-title'));
     },
 
 
@@ -108,12 +109,14 @@ var header = {
                 visibility: 'hidden',
                 opacity: '0',
             };
-        if(reverse)
-        {
-            if($(window).scrollTop() > count)
+        if(reverse) {
+            if ($(window).scrollTop() > count)
                 $(selector).css(optionsHide);
             else
+            {
+                header.changeElementOffset('.logo', '#menu-opener');
                 $(selector).css(optionsShow);
+            }
         }
         else
         {
@@ -144,7 +147,8 @@ var header = {
     changeElementOffset: function(selector1, selector2)
     {
         var height = eval($(selector1).offset().top);
-            $(selector2).offset({top: height});
+
+        $(selector2).offset({top: height});
     },
 
     /**
@@ -160,6 +164,29 @@ var header = {
                 scrollTop : nt
             } , 500 , 'easeInOutCubic' );
         } )
+    },
+
+    animatedTitle: function(selector)
+    {
+        selector.append('<i class="screen"></i><i class="screen2"></i><i class="screen3"></i>');
+        header.animationForTitle(selector);
+
+        $(window).scroll(function(){
+            header.animationForTitle(selector);
+        });
+    },
+
+    animationForTitle: function(selector)
+    {
+        selector.each(function(){
+
+            if($(this).visible())
+            {
+                $(this).find('.screen').css('left', '-100%');
+                $(this).find('.screen2').css('left', '-100%');
+                $(this).find('.screen3').css('left', '-100%');
+            }
+        });
     }
 
 };

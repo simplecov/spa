@@ -8,8 +8,12 @@ section{
   }
 
   &:nth-child(even){
-    background: rgb(0, 52, 101);
+    background: $main-color1;
     color: white;
+
+    .screen{
+      background: $main-color1;
+    }
   }
 
   &:last-child{
@@ -82,5 +86,73 @@ section{
   &.red{
     background: $regular-btn-red;
     @include pulse-keyframe(pulse-red, $regular-btn-red, 15, 2.25, cubic-bezier(0.66, 0, 0, 1));
+  }
+}
+
+.stylish-title{
+  position: relative;
+  visibility: visible;
+  overflow: hidden;
+  display: inline-block;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+  &:before{
+    content: '[ ';
+  }
+  &:after{
+    content: ' ]';
+  }
+
+  .screen{
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 105%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+
+  .screen2{
+    background: $main-color1;
+    position: absolute;
+    width: 100%;
+    height: 105%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .screen3{
+    background: $main-color2;
+    position: absolute;
+    width: 100%;
+    height: 105%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    -webkit-transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -ms-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
   }
 }
