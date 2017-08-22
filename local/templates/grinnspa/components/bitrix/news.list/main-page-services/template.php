@@ -26,29 +26,7 @@ $this->setFrameMode(true);
             <div class="card-block">
                 <h4 class="card-title"><?=$arItem['NAME']?></h4>
                 <p class="card-text"><?=$arItem['PREVIEW_TEXT']?></p>
-                <a href="#" class="btn-pulse blue"><span>Заказать</span></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-3">
-        <div class="card">
-            <img class="card-img-top" src="<?=$arItem['IMAGE']?>" alt="<?=$arItem['NAME']?>">
-            <div class="card-block">
-                <h4 class="card-title"><?=$arItem['NAME']?></h4>
-                <p class="card-text"><?=$arItem['PREVIEW_TEXT']?></p>
-                <a href="#" class="btn-pulse blue"><span>Заказать</span></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-3">
-        <div class="card">
-            <img class="card-img-top" src="<?=$arItem['IMAGE']?>" alt="<?=$arItem['NAME']?>">
-            <div class="card-block">
-                <h4 class="card-title"><?=$arItem['NAME']?></h4>
-                <p class="card-text"><?=$arItem['PREVIEW_TEXT']?></p>
-                <a href="#" class="btn-pulse blue"><span>Заказать</span></a>
+                <a href="#" class="btn-pulse"><span>Заказать</span></a>
             </div>
         </div>
     </div>

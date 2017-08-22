@@ -9198,6 +9198,10 @@ Plugins
 /**
 Regular
  */
+body {
+  color: #003465;
+  background: #fff5d8; }
+
 section {
   margin-bottom: 30px;
   padding-top: 15px;
@@ -9205,27 +9209,33 @@ section {
   section:first-child {
     margin-top: 30px; }
   section:nth-child(even) {
-    background: #003465;
+    background: #41a7c1;
     color: white; }
     section:nth-child(even) .screen {
-      background: #003465; }
+      background: #41a7c1; }
+    section:nth-child(even) .screen2 {
+      background: white; }
+
+.btn-regular {
+  background: #41a7c1;
+  color: white; }
 
 .btn-pulse {
   position: relative;
-  background: #003465;
+  background: #41a7c1;
   color: white;
   height: 70px;
   width: 70px;
-  margin-top: calc(70px * .3);
+  margin: calc(70px * .3) 0 0 calc(70px * .3);
   line-height: 70px;
   font-size: 16px;
   display: inline-block;
   text-align: center;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -9252,39 +9262,41 @@ section {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    font-size: 80%; }
+    font-size: 80%;
+    margin: 0; }
   .btn-pulse.blue {
-    background: #003465;
+    background: #41a7c1;
     -webkit-animation: pulse-blue 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
     -moz-animation: pulse-blue 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
     -ms-animation: pulse-blue 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
     animation: pulse-blue 2.25s infinite cubic-bezier(0.66, 0, 0, 1); }
 @-webkit-keyframes pulse-blue {
   from {
-    box-shadow: 0 0 0 0px #003465; }
+    box-shadow: 0 0 0 0px #41a7c1; }
   to {
-    box-shadow: 0 0 0 15px rgba(0, 52, 101, 0); } }
+    box-shadow: 0 0 0 15px rgba(65, 167, 193, 0); } }
 @-moz-keyframes pulse-blue {
   from {
-    box-shadow: 0 0 0 0px #003465; }
+    box-shadow: 0 0 0 0px #41a7c1; }
   to {
-    box-shadow: 0 0 0 15px rgba(0, 52, 101, 0); } }
+    box-shadow: 0 0 0 15px rgba(65, 167, 193, 0); } }
 @-ms-keyframes pulse-blue {
   from {
-    box-shadow: 0 0 0 0px #003465; }
+    box-shadow: 0 0 0 0px #41a7c1; }
   to {
-    box-shadow: 0 0 0 15px rgba(0, 52, 101, 0); } }
+    box-shadow: 0 0 0 15px rgba(65, 167, 193, 0); } }
 @keyframes pulse-blue {
   from {
-    box-shadow: 0 0 0 0px #003465; }
+    box-shadow: 0 0 0 0px #41a7c1; }
   to {
-    box-shadow: 0 0 0 15px rgba(0, 52, 101, 0); } }
+    box-shadow: 0 0 0 15px rgba(65, 167, 193, 0); } }
     .btn-pulse.blue:hover {
       -webkit-animation: none;
       -o-animation: none;
       animation: none; }
   .btn-pulse.red {
     background: #e00920;
+    color: white;
     -webkit-animation: pulse-red 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
     -moz-animation: pulse-red 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
     -ms-animation: pulse-red 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
@@ -9319,41 +9331,41 @@ section {
   visibility: visible;
   overflow: hidden;
   display: inline-block;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
   .stylish-title:before {
     content: '[ '; }
   .stylish-title:after {
     content: ' ]'; }
   .stylish-title .screen {
-    background: white;
+    background: #fff5d8;
     position: absolute;
     width: 100%;
     height: 105%;
     top: 0;
     left: 0;
     z-index: 3;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out; }
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
   .stylish-title .screen2 {
-    background: #003465;
+    background: #41a7c1;
     position: absolute;
     width: 100%;
     height: 105%;
     top: 0;
     left: 0;
     z-index: 2;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out; }
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out; }
   .stylish-title .screen3 {
     background: #e00920;
     position: absolute;
@@ -9362,11 +9374,11 @@ section {
     top: 0;
     left: 0;
     z-index: 1;
-    -webkit-transition: all .7s ease-in-out;
-    -moz-transition: all .7s ease-in-out;
-    -ms-transition: all .7s ease-in-out;
-    -o-transition: all .7s ease-in-out;
-    transition: all .7s ease-in-out; }
+    -webkit-transition: all 1.2s ease-in-out;
+    -moz-transition: all 1.2s ease-in-out;
+    -ms-transition: all 1.2s ease-in-out;
+    -o-transition: all 1.2s ease-in-out;
+    transition: all 1.2s ease-in-out; }
 
 .header-container {
   position: absolute;
@@ -9562,13 +9574,20 @@ Beauty open\close toggler animation
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  border-color: #003465; }
+  margin-bottom: 30px;
+  border-color: #41a7c1; }
   .main-page-services .card .card-img-top {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0; }
-  .main-page-services .card .card-block .card-text {
-    height: 70px;
-    overflow: hidden; }
+  .main-page-services .card .card-block {
+    text-align: right; }
+    .main-page-services .card .card-block .card-title {
+      text-align: left; }
+    .main-page-services .card .card-block .card-text {
+      height: 70px;
+      overflow: hidden; }
+    .main-page-services .card .card-block .card-button {
+      display: inline-block; }
 
 /*# sourceMappingURL=styles.css.map */
