@@ -26,7 +26,7 @@ $this->setFrameMode(true);
             <div class="card-block">
                 <h4 class="card-title"><?=$arItem['NAME']?></h4>
                 <p class="card-text"><?=$arItem['PREVIEW_TEXT']?></p>
-                <a href="#" class="btn-pulse"><span>Заказать</span></a>
+                <?\Simplecov\Helpres::createButton('modal', 'btn-regular', 'Подробнее', $arItem['NAME'], $arItem['DETAIL_PAGE_URL'])?>
             </div>
         </div>
     </div>

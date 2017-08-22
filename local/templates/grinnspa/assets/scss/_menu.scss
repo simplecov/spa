@@ -18,19 +18,6 @@
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 
-  @include media-breakpoint-down(sm){
-    max-height: none;
-
-    li{
-      width: 100%;
-      margin-bottom: 5px;
-
-      a{
-        padding: 0;
-      }
-    }
-  }
-
   &.main-menu-shown{
     visibility: visible;
     top: 100%;
@@ -56,6 +43,21 @@
 
       &:hover{
         text-decoration: none;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm){
+    max-height: none;
+
+    li{
+      width: 100%;
+      margin-bottom: 5px;
+      text-align: center;
+
+      a{
+        font-size: 18px;
+        padding: 5px 0;
       }
     }
   }

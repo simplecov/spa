@@ -33,6 +33,13 @@ section{
 .btn-regular{
   background: $main-color1;
   color: white;
+  padding: 10px;
+
+  &:hover{
+    color: white;
+    text-decoration: none;
+    @include pulse-keyframe(pulse-blue, $regular-btn-blue, 15, 1.25, cubic-bezier(0.66, 0, 0, 1), true);
+  }
 }
 
 .btn-pulse{
@@ -41,6 +48,7 @@ section{
   color: $regular-btn-textColor;
   height: $regular-btn-size;
   width: $regular-btn-size;
+  border: 0;
 
   $margin: calc(#{$regular-btn-size } * .3);
   margin: $margin 0 0 $margin;
@@ -92,13 +100,13 @@ section{
 
   &.blue{
     background: $regular-btn-blue;
-    @include pulse-keyframe(pulse-blue, $regular-btn-blue, 15, 2.25, cubic-bezier(0.66, 0, 0, 1));
+    @include pulse-keyframe(pulse-blue, $regular-btn-blue, 15, 2.25, cubic-bezier(0.66, 0, 0, 1), false);
   }
 
   &.red{
     background: $main-red;
     color: white;
-    @include pulse-keyframe(pulse-red, $main-red, 15, 2.25, cubic-bezier(0.66, 0, 0, 1));
+    @include pulse-keyframe(pulse-red, $main-red, 15, 2.25, cubic-bezier(0.66, 0, 0, 1), false);
   }
 }
 

@@ -6,3 +6,6 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"]."/local/php_interface/include/const.ph
 
 if (file_exists($_SERVER["DOCUMENT_ROOT"]."/local/php_interface/include/dump.php"))
     require_once($_SERVER["DOCUMENT_ROOT"]."/local/php_interface/include/dump.php");
+
+if (file_exists($_SERVER["DOCUMENT_ROOT"]."/local/php_interface/include/helpers.php"))
+    require_once($_SERVER["DOCUMENT_ROOT"]."/local/php_interface/include/helpers.php");

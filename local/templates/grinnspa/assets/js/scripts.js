@@ -34,10 +34,15 @@ $(document).ready(function(){
     $('.header-big-slider').slick({
         dots: true,
         infinite: true,
-        speed: 1500,
+        speed: 1200,
         fade: true,
         adaptiveHeight: true,
-        autoplay: true
+        autoplay: true,
+        cssEase: 'ease-in-out',
+        pauseOnFocus: true,
+        pauseOnHover: true,
+        pauseOnDotsHover: true,
+        //vertical: true,
     });
 });
 

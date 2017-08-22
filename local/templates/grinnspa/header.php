@@ -34,7 +34,7 @@ $asset = Bitrix\Main\Page\Asset::getInstance();
 
             <div class="header-media">
                 <div class="logo">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/assets/images/spa-logo.png">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/assets/images/spa-logo-tr.png">
                 </div>
 
                 <a id="menu-opener" href="#" data-target="main-menu">

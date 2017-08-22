@@ -1,0 +1,20 @@
+.modal-content{
+  font-family: 'DINPro-Regular';
+  background: $main-color1;
+  color: white;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+
+  .modal-header{
+    border: 0;
+
+    .close{
+      color: white;
+      @include transitionOptions(all, .4s, ease-in-out);
+    }
+  }
+  .modal-footer{
+    border: 0;
+  }
+}

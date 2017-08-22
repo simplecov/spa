@@ -1,4 +1,4 @@
-@mixin pulse-keyframe($name, $color, $size, $time, $animation)
+@mixin pulse-keyframe($name, $color, $size, $time, $animation, $hover)
 {
 
   -webkit-animation: #{$name} #{$time}s infinite $animation;
@@ -39,10 +39,13 @@
     }
   }
 
-  &:hover{
-    -webkit-animation: none;
-    -o-animation: none;
-    animation: none;
+  @if($hover != true)
+  {
+    &:hover{
+      -webkit-animation: none;
+      -o-animation: none;
+      animation: none;
+    }
   }
 }
 
