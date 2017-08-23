@@ -3,7 +3,7 @@
   width: 100%;
   display: block;
   text-align: left;
-  background: $menu-bg;
+  background: $menu-bg2;
   padding: 15px;
   max-height: 60px;
   margin: 0;
@@ -29,9 +29,9 @@
     list-style-type: none;
     display: inline-block;
 
-    &:first-child a{
-      padding: 0 10px 0 0;
-    };
+    &.selected{
+      background: $main-red;
+    }
 
     a{
       color: $menu-text-color;
@@ -42,6 +42,12 @@
       text-transform: uppercase;
 
       &:hover{
+        text-decoration: none;
+      }
+
+      &:focus, &:active, &:visited{
+        color: $regular-btn-textColor;
+        outline: 0 !important;
         text-decoration: none;
       }
     }

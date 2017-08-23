@@ -19,6 +19,7 @@ $regular-btn-fontSize: 16px;
 
 
 //Menu colors
-$menu-text-color: #003465;
-$menu-bg: transparentize(white, .5);
+$menu-text-color: white;
+$menu-bg: $main-color2;
+$menu-bg2: $main-color1;
 $menu-toggler-color: #ffffff;

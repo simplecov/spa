@@ -11,6 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
+//dump($arResult['ITEMS']);
 ?>
 <div class="header-big-slider">
     <?foreach($arResult["ITEMS"] as $arItem):
@@ -21,7 +23,15 @@ $this->setFrameMode(true);
 
         <div class="slider-item" id="<?=$id?>">
             <div class="image" style="background-image: url(<?=$arItem['IMAGE']?>);  background-size: cover; background-repeat: no-repeat; height: 100vh;"></div>
+            <div class="item-content">
+                <h2 class="content-title stylish-title"><?=$arItem['NAME']?></h2>
+                <?\Simplecov\Helpres::createButton('link', 'slide-btn btn-pulse red round hover-pulse-stop', 'Смотреть', '', '#')?>
+            </div>
         </div>
 
     <?endforeach?>
 </div>
+
+<pre>
+<?print_r($arResult['PROPERTIES'])?>
+</pre>

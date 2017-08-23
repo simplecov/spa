@@ -32,17 +32,16 @@ $(document).ready(function(){
      */
     //$('.header-big-slider').height($(window).height());
     $('.header-big-slider').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 1200,
         fade: true,
         adaptiveHeight: true,
-        autoplay: true,
+        autoplay: false,
         cssEase: 'ease-in-out',
         pauseOnFocus: true,
         pauseOnHover: true,
         pauseOnDotsHover: true,
-        //vertical: true,
     });
 });
 
@@ -171,6 +170,10 @@ var header = {
         } )
     },
 
+    /**
+     * To animate titles
+     * @param selector
+     */
     animatedTitle: function(selector)
     {
         selector.append('<i class="screen"></i><i class="screen2"></i><i class="screen3"></i>');
@@ -181,15 +184,19 @@ var header = {
         });
     },
 
+    /**
+     * Uses in animatedTitle function, create and change elements witch are governed by CSS
+     * @param selector
+     */
     animationForTitle: function(selector)
     {
         selector.each(function(){
 
             if($(this).visible())
             {
-                $(this).find('.screen').css('left', '-100%');
-                $(this).find('.screen2').css('left', '-100%');
-                $(this).find('.screen3').css('left', '-100%');
+                $(this).find('.screen').css('right', '-100%');
+                $(this).find('.screen2').css('right', '-100%');
+                $(this).find('.screen3').css('right', '-100%');
             }
         });
     }

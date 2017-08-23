@@ -14,7 +14,38 @@
       @include transitionOptions(all, .4s, ease-in-out);
     }
   }
-  .modal-footer{
-    border: 0;
+
+  .modal-body{
+
+    .form{
+
+      .form-group{
+
+        &.btn-container{
+          text-align: center;
+        }
+
+        .form-control{
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0;
+          border: 0;
+          color: $text-color1;
+
+          &:focus, &:active, &:visited{
+            outline: 0 !important;
+            text-decoration: none;
+            border: 0;
+          }
+
+          &[disabled]{
+            background: $main-color1;
+            border: 0;
+            color: $regular-btn-textColor;
+            font-size: 20px;
+          }
+        }
+      }
+    }
   }
 }

@@ -16,6 +16,10 @@ class Helpres{
             case 'submit':
                 echo '<button class="' . $class . '" type="submit" ' . $data . '><span>' . $buttonText . '</span></a>';
                 break;
+
+            case 'link':
+                echo '<a href="' . $href . '" class="' . $class . '" ' . $data . '><span>' . $buttonText . '</span></a>';
+                break;
         }
     }
 }

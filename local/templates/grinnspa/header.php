@@ -68,7 +68,8 @@ $asset = Bitrix\Main\Page\Asset::getInstance();
 
         </header>
 
-<?$APPLICATION->IncludeComponent("bitrix:news.list", "main-page-slider", Array(
+<?
+$APPLICATION->IncludeComponent("bitrix:news.list", "main-page-slider", Array(
     "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
     "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
     "AJAX_MODE" => "N",	// Включить режим AJAX
@@ -122,9 +123,9 @@ $asset = Bitrix\Main\Page\Asset::getInstance();
     "SET_STATUS_404" => "N",	// Устанавливать статус 404
     "SET_TITLE" => "N",	// Устанавливать заголовок страницы
     "SHOW_404" => "N",	// Показ специальной страницы
-    "SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+    "SORT_BY1" => "ID",	// Поле для первой сортировки новостей
     "SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
-    "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+    "SORT_ORDER1" => "ASC",	// Направление для первой сортировки новостей
     "SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
     "STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
 ),

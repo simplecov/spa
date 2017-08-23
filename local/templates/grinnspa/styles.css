@@ -9247,6 +9247,11 @@ section {
     box-shadow: 0 0 0 0px #41a7c1; }
   to {
     box-shadow: 0 0 0 15px rgba(65, 167, 193, 0); } }
+  .btn-regular:focus, .btn-regular:active, .btn-regular:visited {
+    color: white;
+    outline: 0 !important;
+    text-decoration: none; }
+
 .btn-pulse {
   position: relative;
   background: #41a7c1;
@@ -9276,7 +9281,7 @@ section {
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
-  .btn-pulse:hover {
+  .btn-pulse.hover-pulse-stop:hover {
     color: white;
     text-decoration: none;
     -webkit-animation: none;
@@ -9285,7 +9290,8 @@ section {
     animation: none; }
   .btn-pulse:focus, .btn-pulse:active, .btn-pulse:visited {
     color: white;
-    outline: 0 !important; }
+    outline: 0 !important;
+    text-decoration: none; }
   .btn-pulse.round {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -9374,7 +9380,7 @@ section {
     width: 100%;
     height: 105%;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 3;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -9387,7 +9393,7 @@ section {
     width: 100%;
     height: 105%;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 2;
     -webkit-transition: all 0.8s ease-in-out;
     -moz-transition: all 0.8s ease-in-out;
@@ -9400,7 +9406,7 @@ section {
     width: 100%;
     height: 105%;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 1;
     -webkit-transition: all 1.2s ease-in-out;
     -moz-transition: all 1.2s ease-in-out;
@@ -9430,7 +9436,7 @@ section {
         height: 70px; } }
     .header-container .header-media.resized {
       height: 70px;
-      background: rgba(255, 255, 255, 0.5); }
+      background: #fff5d8; }
   .header-container .logo {
     position: relative;
     margin: auto 0;
@@ -9554,7 +9560,7 @@ Beauty open\close toggler animation
   width: 100%;
   display: block;
   text-align: left;
-  background: rgba(255, 255, 255, 0.5);
+  background: #41a7c1;
   padding: 15px;
   max-height: 60px;
   margin: 0;
@@ -9574,16 +9580,20 @@ Beauty open\close toggler animation
   .main-menu li {
     list-style-type: none;
     display: inline-block; }
-    .main-menu li:first-child a {
-      padding: 0 10px 0 0; }
+    .main-menu li.selected {
+      background: #e00920; }
     .main-menu li a {
-      color: #003465;
+      color: white;
       font-family: 'DINPro-Regular';
       padding: 0 10px;
       font-size: 14px;
       font-weight: 800;
       text-transform: uppercase; }
       .main-menu li a:hover {
+        text-decoration: none; }
+      .main-menu li a:focus, .main-menu li a:active, .main-menu li a:visited {
+        color: white;
+        outline: 0 !important;
         text-decoration: none; }
   @media (max-width: 767px) {
     .main-menu {
@@ -9616,8 +9626,37 @@ Beauty open\close toggler animation
       -ms-transition: all 0.4s ease-in-out;
       -o-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out; }
-  .modal-content .modal-footer {
-    border: 0; }
+  .modal-content .modal-body .form .form-group.btn-container {
+    text-align: center; }
+  .modal-content .modal-body .form .form-group .form-control {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 0;
+    color: #003465; }
+    .modal-content .modal-body .form .form-group .form-control:focus, .modal-content .modal-body .form .form-group .form-control:active, .modal-content .modal-body .form .form-group .form-control:visited {
+      outline: 0 !important;
+      text-decoration: none;
+      border: 0; }
+    .modal-content .modal-body .form .form-group .form-control[disabled] {
+      background: #41a7c1;
+      border: 0;
+      color: white;
+      font-size: 20px; }
+
+.header-big-slider .slider-item .item-content {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px;
+  width: 100%;
+  bottom: 0;
+  font-size: 20px; }
+  .header-big-slider .slider-item .item-content .content-title {
+    margin: auto 10px;
+    text-shadow: -1px -1px 0px white; }
+  .header-big-slider .slider-item .item-content .slide-btn {
+    margin: auto 10px; }
 
 .main-page-services .card {
   -webkit-border-radius: 0;
