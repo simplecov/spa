@@ -1,6 +1,24 @@
 body{
   color: $text-color1;
   background: $main-color2;
+
+  h1,h2,h3,h4,h5,h6{
+    margin-bottom: 15px;
+  }
+  p{
+    margin-bottom: 15px;
+  }
+
+  span.marked{
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .logo{
+    @include media-breakpoint-down(md){
+      width: 50%;
+    }
+  }
 }
 
 section{
@@ -16,12 +34,14 @@ section{
     background: $main-color1;
     color: white;
 
-    .screen{
-      background: $main-color1;
-    }
+    .animated{
+      .screen{
+        background: $main-color1;
+      }
 
-    .screen2{
-      background: white;
+      .screen2{
+        background: white;
+      }
     }
   }
 
@@ -30,10 +50,30 @@ section{
   }
 }
 
+.regular-link{
+  color: $text-color1;
+
+  @include transitionOptions(all, .3, ease-in-out);
+
+  &:hover{
+    color: $text-color1;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &:focus, &:active, &:visited{
+    color: $text-color1;
+    outline: 0 !important;
+    text-decoration: none;
+  }
+}
+
 .btn-regular{
   background: $main-color1;
   color: $regular-btn-textColor;
   padding: 10px;
+  border-radius: 20px;
+  display: inline-block;
 
   &:hover{
     color: white;
@@ -125,6 +165,7 @@ section{
   visibility: visible;
   overflow: hidden;
   display: inline-block;
+  text-transform: uppercase;
 
   @include transitionOptions(all, .3s, ease-in-out);
 
@@ -135,39 +176,109 @@ section{
     content: ' ]';
   }
 
-  .screen{
-    background: $main-color2;
-    position: absolute;
+  &.full-width{
     width: 100%;
-    height: 105%;
-    top: 0;
-    right: 0;
-    z-index: 3;
-
-    @include transitionOptions(all, .5s, ease-in-out);
+    text-align: center;
   }
 
-  .screen2{
+  &.marked{
+    margin-bottom: 30px;
+  }
+
+  &.animated{
+
+    .screen{
+      background: $main-color2;
+      position: absolute;
+      width: 100%;
+      height: 105%;
+      top: 0;
+      right: 0;
+      z-index: 3;
+
+      @include transitionOptions(all, .5s, ease-in-out);
+    }
+
+    .screen2{
+      background: $main-color1;
+      position: absolute;
+      width: 100%;
+      height: 105%;
+      top: 0;
+      right: 0;
+      z-index: 2;
+
+      @include transitionOptions(all, .8s, ease-in-out);
+    }
+
+    .screen3{
+      background: $main-red;
+      position: absolute;
+      width: 100%;
+      height: 105%;
+      top: 0;
+      right: 0;
+      z-index: 1;
+
+      @include transitionOptions(all, 1.2s, ease-in-out);
+    }
+  }
+}
+
+.stylish-list{
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+
+  &.bg-white{
+    background: transparentize(white, .5);
+  }
+
+  &.bg-blue{
     background: $main-color1;
-    position: absolute;
-    width: 100%;
-    height: 105%;
-    top: 0;
-    right: 0;
-    z-index: 2;
-
-    @include transitionOptions(all, .8s, ease-in-out);
   }
 
-  .screen3{
-    background: $main-red;
-    position: absolute;
-    width: 100%;
-    height: 105%;
-    top: 0;
-    right: 0;
-    z-index: 1;
+  ul{
+    padding: 0 0 0 30px;
 
-    @include transitionOptions(all, 1.2s, ease-in-out);
+    li{
+      position: relative;
+      display: block;
+      list-style-type: none;
+      margin-bottom: 5px;
+      color: $text-color1;
+
+      &:before{
+        content: $fa-var-caret-left;
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: -28px;
+        top: 2px;
+      }
+    }
+  }
+
+  .social{
+
+    .regular-link{
+      display: inline-block;
+      margin-bottom: 15px;
+
+      img{
+        height: 37px;
+      }
+    }
+  }
+
+  .contact-button{
+    padding: 15px;
+  }
+}
+
+.map{
+  .bx-yandex-view-layout{
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid $main-color1;
   }
 }

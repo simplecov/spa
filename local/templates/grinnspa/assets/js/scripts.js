@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+    setTimeout(
+        function()
+        {
+            header.animationForTitle($('.stylish-title'));
+        },
+        500
+    );
+
     $('body').niceScroll({
         scrollspeed: 150,
         cursorborder: 0,
@@ -177,7 +185,6 @@ var header = {
     animatedTitle: function(selector)
     {
         selector.append('<i class="screen"></i><i class="screen2"></i><i class="screen3"></i>');
-        header.animationForTitle(selector);
 
         $(window).scroll(function(){
             header.animationForTitle(selector);
@@ -191,7 +198,6 @@ var header = {
     animationForTitle: function(selector)
     {
         selector.each(function(){
-
             if($(this).visible())
             {
                 $(this).find('.screen').css('right', '-100%');

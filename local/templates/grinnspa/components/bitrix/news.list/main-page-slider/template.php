@@ -22,7 +22,7 @@ $this->setFrameMode(true);
     ?>
 
         <div class="slider-item" id="<?=$id?>">
-            <div class="image" style="background-image: url(<?=$arItem['IMAGE']?>);  background-size: cover; background-repeat: no-repeat; height: 100vh;"></div>
+            <div class="image" style="background-image: url(<?=$arItem['IMAGE']?>);  background-size: cover; background-repeat: no-repeat; height: 100vh; background-position: center;"></div>
             <div class="item-content">
                 <h2 class="content-title stylish-title"><?=$arItem['NAME']?></h2>
                 <?\Simplecov\Helpres::createButton('link', 'slide-btn btn-pulse red round hover-pulse-stop', 'Смотреть', '', '#')?>

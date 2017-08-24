@@ -6,7 +6,8 @@ $regular-text-shadow: 1px 1px 0 rgb(224, 9, 32);
 $main-red: #e00920;
 
 //Text colors
-$text-color1: rgb(0, 52, 101);
+$text-color1: transparentize(rgb(0, 52, 101), .25);
+$text-color2: transparentize(white, .25);
 
 
 //Buttons
