@@ -9452,24 +9452,42 @@ section {
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 20px; }
+  @media (max-width: 991px) {
+    .stylish-list {
+      display: block; } }
   .stylish-list.bg-white {
     background: rgba(255, 255, 255, 0.5); }
   .stylish-list.bg-blue {
     background: #41a7c1; }
-  .stylish-list ul {
+  .stylish-list.flexed {
+    display: flex; }
+    @media (max-width: 991px) {
+      .stylish-list.flexed {
+        flex-direction: column; } }
+  .stylish-list .address-div.margin-auto {
+    margin: auto; }
+    @media (max-width: 991px) {
+      .stylish-list .address-div.margin-auto {
+        margin: auto 0; } }
+  .stylish-list .address-div ul {
     padding: 0 0 0 30px; }
-    .stylish-list ul li {
+    .stylish-list .address-div ul li {
       position: relative;
       display: block;
       list-style-type: none;
       margin-bottom: 5px;
       color: rgba(0, 52, 101, 0.75); }
-      .stylish-list ul li:before {
+      .stylish-list .address-div ul li:before {
         content: "";
         font-family: 'FontAwesome';
         position: absolute;
         left: -28px;
         top: 2px; }
+  .stylish-list .social.margin-auto {
+    margin: auto; }
+    @media (max-width: 991px) {
+      .stylish-list .social.margin-auto {
+        margin: auto 0; } }
   .stylish-list .social .regular-link {
     display: inline-block;
     margin-bottom: 15px; }
@@ -9477,6 +9495,14 @@ section {
       height: 37px; }
   .stylish-list .contact-button {
     padding: 15px; }
+    .stylish-list .contact-button.margin-auto {
+      margin: auto; }
+      @media (max-width: 991px) {
+        .stylish-list .contact-button.margin-auto {
+          margin: auto 0; } }
+    @media (max-width: 991px) {
+      .stylish-list .contact-button {
+        text-align: center; } }
 
 .map .bx-yandex-view-layout {
   overflow: hidden;

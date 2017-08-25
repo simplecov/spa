@@ -57,3 +57,14 @@
   -o-transition: $prop $time $animation;
   transition: $prop $time $animation;
 }
+
+@mixin margin-auto()
+{
+  &.margin-auto{
+    margin: auto;
+
+    @include media-breakpoint-down(md){
+      margin: auto 0;
+    }
+  }
+}

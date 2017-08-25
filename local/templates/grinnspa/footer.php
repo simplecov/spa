@@ -10,20 +10,24 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             <div class="col-12">
                 <h2 class="stylish-title animated">Контактные данные</h2>
 
-                <div class="address stylish-list bg-white">
-                    <ul>
-                        <li>г.Орел, Кромское шоссе 4</li>
-                        <li>
-                            <a class="regular-link" href="callto:44-01-67">44-01-67</a>
-                            <span class="marked">|</span>
-                            <a class="regular-link" href="callto:49-53-20">49-53-20</a>
-                        </li>
-                        <li>
-                            <a class="regular-link" href="http://www.tmk-grinn.ru/" target="_blank">www.tmk-grinn.ru</a>
-                        </li>
-                    </ul>
+                <div class="address stylish-list bg-white flexed">
 
-                    <div class="social">
+                    <div class="address-div margin-auto">
+                        <h3 class="stylish-title">Адрес</h3>
+                        <ul>
+                            <li>г.Орел, Кромское шоссе 4</li>
+                            <li>
+                                <a class="regular-link" href="callto:44-01-67">44-01-67</a>
+                                <span class="marked">|</span>
+                                <a class="regular-link" href="callto:49-53-20">49-53-20</a>
+                            </li>
+                            <li>
+                                <a class="regular-link" href="http://www.tmk-grinn.ru/" target="_blank">www.tmk-grinn.ru</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="social margin-auto">
                         <a class="regular-link" href="https://vk.com/grinnspa" target="_blank">
                             <img src="<?=SITE_TEMPLATE_PATH?>/assets/images/vk.png">
                             Оздоровительный комплекс «ГриНН SPA»
@@ -45,7 +49,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                         </a>
                     </div>
 
-                    <div class="contact-button">
+                    <div class="contact-button margin-auto">
                         <?\Simplecov\Helpres::createButton('modal', 'btn-pulse blue round hover-pulse-stop', 'Написать')?>
                     </div>
                 </div>

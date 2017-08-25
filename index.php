@@ -20,7 +20,7 @@ $APPLICATION->SetTitle("Главная");
                     </p>
 
                     <div class="stylish-list bg-white">
-                        <h2 class="stylish-title animated upper ">Мы будем рады видеть Вас:</h2>
+                        <h2 class="stylish-title animated">Мы будем рады видеть Вас:</h2>
                         <ul>
                             <li>
                                 в комфортном <span class="marked">фитнес-центре</span> премиум-класса, оснащенном современными тренажерами Life Fitness

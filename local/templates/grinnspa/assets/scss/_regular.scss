@@ -230,6 +230,10 @@ section{
   margin-bottom: 15px;
   border-radius: 20px;
 
+  @include media-breakpoint-down(md){
+    display: block;
+  }
+
   &.bg-white{
     background: transparentize(white, .5);
   }
@@ -238,27 +242,41 @@ section{
     background: $main-color1;
   }
 
-  ul{
-    padding: 0 0 0 30px;
+  &.flexed{
+    display: flex;
+    @include media-breakpoint-down(md){
+      flex-direction: column;
+    }
+  }
 
-    li{
-      position: relative;
-      display: block;
-      list-style-type: none;
-      margin-bottom: 5px;
-      color: $text-color1;
+  .address-div{
 
-      &:before{
-        content: $fa-var-caret-left;
-        font-family: 'FontAwesome';
-        position: absolute;
-        left: -28px;
-        top: 2px;
+    @include margin-auto;
+
+    ul{
+      padding: 0 0 0 30px;
+
+      li{
+        position: relative;
+        display: block;
+        list-style-type: none;
+        margin-bottom: 5px;
+        color: $text-color1;
+
+        &:before{
+          content: $fa-var-caret-left;
+          font-family: 'FontAwesome';
+          position: absolute;
+          left: -28px;
+          top: 2px;
+        }
       }
     }
   }
 
   .social{
+
+    @include margin-auto;
 
     .regular-link{
       display: inline-block;
@@ -272,6 +290,12 @@ section{
 
   .contact-button{
     padding: 15px;
+
+    @include margin-auto;
+
+    @include media-breakpoint-down(md){
+      text-align: center;
+    }
   }
 }
 
