@@ -1,0 +1,48 @@
+.services{
+
+  .card{
+    margin-bottom: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    border-color: $main-color1;
+
+    .card-block{
+      color: $text-color1;
+      opacity: .9;
+
+      .primary-info{
+        border-right: 2px solid transparentize($main-red, .5);
+
+        @include media-breakpoint-down(md){
+          border-right: none;
+        }
+
+        .card-title{
+          font-weight: 800;
+        }
+      }
+
+      .secondary-info{
+
+        @include media-breakpoint-down(md){
+          border-top: 2px solid transparentize($main-red, .5);
+          padding-top: 15px;
+        }
+
+        .stylish-list{
+          padding: 0;
+
+          ul li{
+            line-height: 20px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .card-button{
+        display: inline-block;
+      }
+    }
+  }
+}

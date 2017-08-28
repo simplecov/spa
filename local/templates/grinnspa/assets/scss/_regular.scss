@@ -22,12 +22,12 @@ body{
 }
 
 section{
-  margin-bottom: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin-bottom: $margin;
+  padding-top: $padding;
+  padding-bottom: $padding;
 
   &:first-child{
-    margin-top: 30px;
+    padding-top: $padding;
   }
 
   &:nth-child(even){
@@ -249,29 +249,29 @@ section{
     }
   }
 
+  ul{
+    padding: 0 0 0 30px;
+
+    li{
+      position: relative;
+      display: block;
+      list-style-type: none;
+      margin-bottom: 5px;
+      color: $text-color1;
+
+      &:before{
+        content: $fa-var-caret-left;
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: -28px;
+        top: 2px;
+      }
+    }
+  }
+
   .address-div{
 
     @include margin-auto;
-
-    ul{
-      padding: 0 0 0 30px;
-
-      li{
-        position: relative;
-        display: block;
-        list-style-type: none;
-        margin-bottom: 5px;
-        color: $text-color1;
-
-        &:before{
-          content: $fa-var-caret-left;
-          font-family: 'FontAwesome';
-          position: absolute;
-          left: -28px;
-          top: 2px;
-        }
-      }
-    }
   }
 
   .social{
@@ -295,6 +295,20 @@ section{
 
     @include media-breakpoint-down(md){
       text-align: center;
+    }
+  }
+}
+
+.stylish-text{
+  p{
+    text-align: justify;
+    margin-bottom: 15px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+
+    &:last-child{
+      margin-bottom: 0;
     }
   }
 }

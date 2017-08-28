@@ -11,7 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-//dump($arResult['ITEMS']);
 ?>
 
 <?foreach($arResult["ITEMS"] as $arItem):
@@ -20,13 +19,28 @@ $this->setFrameMode(true);
     $id = $this->GetEditAreaId($arItem['ID']);
     ?>
 
-    <div class="col-12 col-md-6 col-lg-3">
+    <div class="col-12 col-md-6">
         <div class="card">
-            <img class="card-img-top" src="<?=$arItem['IMAGE']?>" alt="<?=$arItem['NAME']?>">
             <div class="card-block">
-                <h4 class="card-title"><?=$arItem['NAME']?></h4>
-                <p class="card-text"><?=$arItem['PREVIEW_TEXT']?></p>
-                <?\Simplecov\Helpres::createButton('modal', 'btn-regular', 'Подробнее', $arItem['NAME'], $arItem['DETAIL_PAGE_URL'])?>
+                <div class="row">
+                    <div class="col-12 col-lg-4 primary-info">
+                        <h4 class="card-title stylish-title"><?=$arItem['NAME']?></h4>
+                        <p><?=$arItem['LASTING']?></p>
+                    </div>
+                    <div class="col-12 col-lg-8 secondary-info">
+                        <div class="stylish-list">
+                            <ul>
+                                <?foreach($arItem['SERVICE_LIST'] as $text):?>
+                                    <li><?=$text?></li>
+                                <?endforeach;?>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12">
+
+                    </div>
+                </div>
+<!--                --><?//\Simplecov\Helpres::createButton('modal', 'btn-regular', 'Подробнее', $arItem['NAME'], $arItem['DETAIL_PAGE_URL'])?>
             </div>
         </div>
     </div>

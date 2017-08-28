@@ -9213,11 +9213,11 @@ body {
       width: 50%; } }
 
 section {
-  margin-bottom: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px; }
+  margin-bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 30px; }
   section:first-child {
-    margin-top: 30px; }
+    padding-top: 30px; }
   section:nth-child(even) {
     background: #41a7c1;
     color: white; }
@@ -9464,25 +9464,25 @@ section {
     @media (max-width: 991px) {
       .stylish-list.flexed {
         flex-direction: column; } }
-  .stylish-list .address-div.margin-auto {
-    margin: auto; }
-    @media (max-width: 991px) {
-      .stylish-list .address-div.margin-auto {
-        margin: auto 0; } }
-  .stylish-list .address-div ul {
+  .stylish-list ul {
     padding: 0 0 0 30px; }
-    .stylish-list .address-div ul li {
+    .stylish-list ul li {
       position: relative;
       display: block;
       list-style-type: none;
       margin-bottom: 5px;
       color: rgba(0, 52, 101, 0.75); }
-      .stylish-list .address-div ul li:before {
+      .stylish-list ul li:before {
         content: "";
         font-family: 'FontAwesome';
         position: absolute;
         left: -28px;
         top: 2px; }
+  .stylish-list .address-div.margin-auto {
+    margin: auto; }
+    @media (max-width: 991px) {
+      .stylish-list .address-div.margin-auto {
+        margin: auto 0; } }
   .stylish-list .social.margin-auto {
     margin: auto; }
     @media (max-width: 991px) {
@@ -9503,6 +9503,15 @@ section {
     @media (max-width: 991px) {
       .stylish-list .contact-button {
         text-align: center; } }
+
+.stylish-text p {
+  text-align: justify;
+  margin-bottom: 15px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
+  .stylish-text p:last-child {
+    margin-bottom: 0; }
 
 .map .bx-yandex-view-layout {
   overflow: hidden;
@@ -9743,26 +9752,39 @@ Beauty open\close toggler animation
       color: white;
       font-size: 20px; }
 
-.header-big-slider .slider-item .item-content {
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  padding: 30px;
-  width: 100%;
-  bottom: 0;
-  font-size: 20px; }
-  .header-big-slider .slider-item .item-content .content-title {
-    margin: auto 10px;
-    text-shadow: -1px -1px 0px white; }
-  .header-big-slider .slider-item .item-content .slide-btn {
-    margin: auto 10px; }
+#carouselMain .carousel-inner {
+  height: 100%;
+  width: 100%; }
+  #carouselMain .carousel-inner .carousel-item {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+    #carouselMain .carousel-inner .carousel-item .carousel-caption {
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      padding: 30px;
+      width: 100%;
+      bottom: 0;
+      font-size: 20px;
+      left: 0; }
+      #carouselMain .carousel-inner .carousel-item .carousel-caption .content-title {
+        color: rgba(255, 255, 255, 0.75);
+        margin: auto 10px; }
+        @media (max-width: 991px) {
+          #carouselMain .carousel-inner .carousel-item .carousel-caption .content-title {
+            font-size: 130%; } }
+      #carouselMain .carousel-inner .carousel-item .carousel-caption .slide-btn {
+        margin: auto 10px; }
 
-.main-page-services .card {
+.services-main-page .card {
   margin-bottom: 30px;
   border-radius: 20px;
   overflow: hidden;
   border-color: #41a7c1; }
-  .main-page-services .card .card-img-top {
+  .services-main-page .card .card-img-top {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -9770,18 +9792,47 @@ Beauty open\close toggler animation
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
-  .main-page-services .card .card-block {
-    text-align: right;
-    color: rgba(0, 52, 101, 0.75); }
-    .main-page-services .card .card-block .card-title {
+  .services-main-page .card .card-block {
+    color: rgba(0, 52, 101, 0.75);
+    text-align: right; }
+    .services-main-page .card .card-block .stylish-list {
+      padding: 0; }
+    .services-main-page .card .card-block .card-title {
       text-align: left; }
-    .main-page-services .card .card-block .card-text {
+    .services-main-page .card .card-block .card-text {
       height: 70px;
       font-size: 14px;
       overflow: hidden;
       line-height: 17px;
       margin-bottom: 15px; }
-    .main-page-services .card .card-block .card-button {
+    .services-main-page .card .card-block .card-button {
+      display: inline-block; }
+
+.services .card {
+  margin-bottom: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  border-color: #41a7c1; }
+  .services .card .card-block {
+    color: rgba(0, 52, 101, 0.75);
+    opacity: .9; }
+    .services .card .card-block .primary-info {
+      border-right: 2px solid rgba(224, 9, 32, 0.5); }
+      @media (max-width: 991px) {
+        .services .card .card-block .primary-info {
+          border-right: none; } }
+      .services .card .card-block .primary-info .card-title {
+        font-weight: 800; }
+    @media (max-width: 991px) {
+      .services .card .card-block .secondary-info {
+        border-top: 2px solid rgba(224, 9, 32, 0.5);
+        padding-top: 15px; } }
+    .services .card .card-block .secondary-info .stylish-list {
+      padding: 0; }
+      .services .card .card-block .secondary-info .stylish-list ul li {
+        line-height: 20px;
+        margin-bottom: 10px; }
+    .services .card .card-block .card-button {
       display: inline-block; }
 
 /*# sourceMappingURL=styles.css.map */

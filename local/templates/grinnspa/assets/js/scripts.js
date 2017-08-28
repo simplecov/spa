@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+    /**
+     * Title animation on page load
+     */
     setTimeout(
         function()
         {
@@ -8,13 +11,24 @@ $(document).ready(function(){
         500
     );
 
+    /**
+     * Scroll plugin init
+     */
     $('body').niceScroll({
         scrollspeed: 150,
         cursorborder: 0,
     });
 
+    console.log(location.pathname);
+
+    /**
+     * Obj init
+     */
     header.init();
 
+    /**
+     * Header obj usage
+     */
     header.changeElementOffset('.logo', '#menu-opener');
 
     header.showHideElementOnScroll('#menu-opener', 50, true);
@@ -38,19 +52,20 @@ $(document).ready(function(){
     /**
      * Main page big slider
      */
-    //$('.header-big-slider').height($(window).height());
-    $('.header-big-slider').slick({
-        dots: false,
-        infinite: true,
-        speed: 1200,
-        fade: true,
-        adaptiveHeight: true,
-        autoplay: false,
-        cssEase: 'ease-in-out',
-        pauseOnFocus: true,
-        pauseOnHover: true,
-        pauseOnDotsHover: true,
-    });
+    $('#carouselMain').height($(window).height());
+    // $('.header-big-slider').slick({
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 1200,
+    //     fade: true,
+    //     adaptiveHeight: true,
+    //     autoplay: false,
+    //     cssEase: 'ease-in-out',
+    //     pauseOnFocus: true,
+    //     pauseOnHover: true,
+    //     pauseOnDotsHover: true,
+    //     initialSlide: 1,
+    // });
 });
 
 var header = {

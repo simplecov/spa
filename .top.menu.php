@@ -16,7 +16,7 @@ $aMenuLinks = Array(
 	),
     Array(
         "Фитнесс-центр",
-        "/fitnes-center",
+        "/fitness-center",
         Array(),
         Array(),
         ""

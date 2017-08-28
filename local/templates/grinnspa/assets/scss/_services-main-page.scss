@@ -1,4 +1,4 @@
-.main-page-services{
+.services-main-page{
 
   .card{
     margin-bottom: 30px;
@@ -18,8 +18,12 @@
     }
 
     .card-block{
-      text-align: right;
       color: $text-color1;
+      text-align: right;
+
+      .stylish-list{
+        padding: 0;
+      }
 
       .card-title{
         text-align: left;

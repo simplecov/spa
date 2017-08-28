@@ -1,22 +1,36 @@
-.header-big-slider{
+#carouselMain{
 
-  .slider-item{
+  .carousel-inner{
+    height: 100%;
+    width: 100%;
 
-    .item-content{
-      position: absolute;
-      display: flex;
-      justify-content: flex-end;
-      padding: 30px;
+    .carousel-item{
+      height: 100%;
       width: 100%;
-      bottom: 0;
-      font-size: 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
-      .content-title{
-        margin: auto 10px;
-        text-shadow: -1px -1px 0px white;
-      }
-      .slide-btn{
-        margin: auto 10px;
+      .carousel-caption{
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        padding: 30px;
+        width: 100%;
+        bottom: 0;
+        font-size: 20px;
+        left: 0;
+
+        .content-title{
+          color: $text-color2;
+          margin: auto 10px;
+          @include media-breakpoint-down(md){
+            font-size: 130%;
+          }
+        }
+        .slide-btn{
+          margin: auto 10px;
+        }
       }
     }
   }

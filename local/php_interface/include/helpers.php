@@ -22,4 +22,9 @@ class Helpres{
                 break;
         }
     }
+
+    public static function createBgStyle($url, $position)
+    {
+        echo 'style="background-image: url(' . SITE_TEMPLATE_PATH . $url . '); background-size: cover; background-position:' . $position . '"';
+    }
 }
