@@ -4,8 +4,9 @@
     margin-bottom: 30px;
     border-radius: 20px;
     overflow: hidden;
+    border: none;
 
-    border-color: $main-color1;
+    //border-color: $main-color1;
 
     .card-block{
       color: $text-color1;
@@ -35,13 +36,21 @@
 
           ul li{
             line-height: 20px;
-            margin-bottom: 10px;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: $text-color1;
           }
         }
-      }
 
-      .card-button{
-        display: inline-block;
+        .price{
+          font-size: 25px;
+          font-weight: 800;
+          margin: 0;
+
+          .ruble{
+            font-weight: 600;
+          }
+        }
       }
     }
   }

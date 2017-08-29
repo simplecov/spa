@@ -29,15 +29,13 @@ $this->setFrameMode(true);
                     </div>
                     <div class="col-12 col-lg-8 secondary-info">
                         <div class="stylish-list">
-                            <ul>
+                            <ul class="can-be-opened">
                                 <?foreach($arItem['SERVICE_LIST'] as $text):?>
                                     <li><?=$text?></li>
                                 <?endforeach;?>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-12">
-
+                        <p class="price"> <?=$arItem['COST']?></p>
                     </div>
                 </div>
 <!--                --><?//\Simplecov\Helpres::createButton('modal', 'btn-regular', 'Подробнее', $arItem['NAME'], $arItem['DETAIL_PAGE_URL'])?>

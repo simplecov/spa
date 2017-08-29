@@ -8,7 +8,7 @@ foreach($arResult['ITEMS'] as $key => $item)
     $arResult['ITEMS'][$key]['SERVICE_LIST'] = explode("\n", $item['PREVIEW_TEXT']);
 
     $arResult['ITEMS'][$key]['LASTING'] = createLastingString($item, 'LASTING');
-    $arResult['ITEMS'][$key]['COST'] = createPriceString();
+    $arResult['ITEMS'][$key]['COST'] = createPriceString(array($item['PROPERTIES']['COST_SIX']['VALUE'], $item['PROPERTIES']['COST_TWELVE']['VALUE']));
 }
 
 function createLastingString($item, $prop)
@@ -20,24 +20,26 @@ function createLastingString($item, $prop)
         if($countLasting == 0)
             $result .= $value;
         else
-            $result .= "/<br>" . $value;
+            $result .= " /<br>" . $value;
 
         $countLasting++;
     }
     return $result;
 }
 
-function createPriceString($item, $props = array())
+function createPriceString($props = array())
 {
     $result = null;
-    $countPrices = count($props);
+    $countPrices = 0;
     foreach ($props as $value)
     {
+        $value .= ' <span class="ruble">&#8381;</span>';
         if($countPrices == 0)
             $result .= $value;
         else
-            $result .= "/" . $value;
+            $result .= " / " . $value;
+        $countPrices++;
     }
     return $result;
 }
-dump($arResult['ITEMS']);
+//dump($arResult['ITEMS']);

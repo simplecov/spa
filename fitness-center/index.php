@@ -38,6 +38,42 @@ $APPLICATION->SetTitle("Фитнесс-центр");
     </div>
 </section>
 
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+                <h2 class="stylish-title animated">Разовое посещение Фитнес-центра</h2>
+            </div>
+
+            <?$APPLICATION->IncludeFile(
+                $APPLICATION->GetTemplatePath("/include_areas/fitness-once.php "),
+                Array(),
+                Array("MODE"=>"php")
+            );?>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+                <h2 class="stylish-title animated">Персональная тренировка с инструктором</h2>
+            </div>
+
+            <?$APPLICATION->IncludeFile(
+                $APPLICATION->GetTemplatePath("/include_areas/fitness-instructor.php "),
+                Array(),
+                Array("MODE"=>"php")
+            );?>
+
+        </div>
+    </div>
+</section>
+
 <section class="services">
     <div class="container">
         <div class="row">
