@@ -10,8 +10,9 @@ Nessecary styles
 Plugins
  */
 @import "assets/scss/plugins/mixins";
-@import "assets/scss/plugins/slick";
-@import "assets/scss/plugins/slick-theme";
+@import "assets/scss/plugins/blueimp-gallery";
+@import "assets/scss/plugins/blueimp-gallery-indicator";
+@import "assets/scss/plugins/blueimp-gallery-video";
 
 
 /**
@@ -24,3 +25,4 @@ Regular
 @import "assets/scss/header-big-slider";
 @import "assets/scss/services-main-page";
 @import "assets/scss/services";
+@import "assets/scss/gallery";

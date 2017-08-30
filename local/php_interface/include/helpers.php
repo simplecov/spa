@@ -27,4 +27,9 @@ class Helpres{
     {
         echo 'style="background-image: url(' . SITE_TEMPLATE_PATH . $url . '); background-size: cover; background-position:' . $position . '"';
     }
+
+    public static function getImageSrc($src)
+    {
+        echo SITE_TEMPLATE_PATH . '/assets/images' . $src;
+    }
 }
