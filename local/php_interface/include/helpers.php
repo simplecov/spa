@@ -23,9 +23,11 @@ class Helpres{
         }
     }
 
-    public static function createBgStyle($url, $position)
+    public static function createBgStyle($url, $position, $templatePath = true)
     {
-        echo 'style="background-image: url(' . SITE_TEMPLATE_PATH . $url . '); background-size: cover; background-position:' . $position . '"';
+        if($templatePath)
+            $url = SITE_TEMPLATE_PATH . $url;
+        echo 'style="background-image: url(' . $url . '); background-size: cover; background-position:' . $position . '"';
     }
 
     public static function getImageSrc($src)

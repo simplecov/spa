@@ -9694,16 +9694,16 @@ section {
     section:nth-child(even) .animated .screen2 {
       background: white; }
 
-#blueimp-gallery .prev, #blueimp-gallery .next {
-  color: white;
+.blueimp-gallery .prev, .blueimp-gallery .next {
+  color: white !important;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-#blueimp-gallery .close {
-  color: white; }
-#blueimp-gallery .indicator > li {
+.blueimp-gallery .close {
+  color: white !important; }
+.blueimp-gallery .indicator > li {
   background-size: cover;
   height: 70px;
   width: 70px;
@@ -10039,7 +10039,25 @@ Beauty open\close toggler animation
       .services .card .card-block .secondary-info .price .ruble {
         font-weight: 600; }
 
-.gallery a img {
-  border-radius: 20px; }
+.gallery {
+  height: 250px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden; }
+  .gallery .gallery-front-content {
+    height: 150px; }
+    .gallery .gallery-front-content .title-image {
+      height: 100%;
+      width: 100%;
+      display: inline-block;
+      cursor: pointer; }
+    .gallery .gallery-front-content .title-div {
+      display: flex; }
+      .gallery .gallery-front-content .title-div .stylish-title {
+        margin: auto; }
+    .gallery .gallery-front-content .images-container {
+      display: none; }
+  .gallery a img {
+    border-radius: 20px; }
 
 /*# sourceMappingURL=styles.css.map */

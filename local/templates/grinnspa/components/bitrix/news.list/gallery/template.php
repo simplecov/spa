@@ -19,18 +19,25 @@ $this->setFrameMode(true);
     $id = $this->GetEditAreaId($arItem['ID']);
     ?>
 
-    <div id="gallery_<?=$arItem['ID']?>" class="gallery col-12">
-        <div class="row">
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="gallery">
+            <div class="row">
+                <div class="gallery-front-content col-12">
+                    <div id="main-image_<?=$arItem['ID']?>" class="title-image" <?\Simplecov\Helpres::createBgStyle($arItem['IMAGE'], 'center', false)?>></div>
 
-            <?foreach($arItem['IMAGES'] as $imgScr):?>
-                <a class="col-6 col-md-4 col-lg-3" href="<?=$imgScr?>" title="Banana">
-                    <img class="img-fluid" src="<?=$imgScr?>" alt="Banana">
-                </a>
-            <?endforeach;?>
+                    <div class="title-div">
+                        <h5 class="stylish-title"><?=$arItem['NAME']?></h5>
+                    </div>
 
+                    <div id="gallery_<?=$arItem['ID']?>" class="images-container">
+                        <?foreach($arItem['IMAGES'] as $imgScr):?>
+                            <a class="images" href="<?=$imgScr?>" title="Banana"></a>
+                        <?endforeach;?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 
     <div id="blueimp-gallery_<?=$arItem['ID']?>" class="blueimp-gallery blueimp-gallery-controls">
         <div class="slides"></div>
@@ -39,16 +46,17 @@ $this->setFrameMode(true);
         <a class="next">›</a>
         <a class="close">×</a>
         <a class="play-pause"></a>
-        <ol class="indicator"></ol>
     </div>
 
-    <script>
-        document.getElementById('gallery_<?=$arItem['ID']?>').onclick = function (event) {
+    <script type="text/javascript">
+        document.getElementById('main-image_<?=$arItem['ID']?>').onclick = function (event) {
             event = event || window.event;
-            var target = event.target || event.srcElement,
-                link = target.src ? target.parentNode : target,
-                options = {index: link, event: event},
-                links = this.getElementsByTagName('a');
+            var options = {
+                    index: 0,
+                    event: event,
+                    container: document.getElementById('blueimp-gallery_<?=$arItem['ID']?>')
+                },
+                links = document.getElementById('gallery_<?=$arItem['ID']?>').getElementsByTagName('a');
             blueimp.Gallery(links, options);
         };
     </script>

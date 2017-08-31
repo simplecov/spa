@@ -1,4 +1,31 @@
 .gallery{
+  height: 250px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+
+  .gallery-front-content{
+    height: 150px;
+
+    .title-image{
+      height: 100%;
+      width: 100%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .title-div{
+      display: flex;
+
+      .stylish-title{
+        margin: auto;
+      }
+    }
+
+    .images-container{
+      display: none;
+    }
+  }
 
   a img{
     border-radius: 20px;

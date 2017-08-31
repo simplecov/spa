@@ -359,16 +359,16 @@ section{
   }
 }
 
-#blueimp-gallery{
+.blueimp-gallery{
 
   .prev, .next{
-   color: white;
+   color: white !important;
 
     @include transitionOptions(all, .3s, ease-in-out);
   }
 
   .close{
-    color: white;
+    color: white !important;
   }
 
   .indicator > li{
@@ -377,7 +377,6 @@ section{
     width: 70px;
     @include transitionOptions(all, .8s, ease);
     @include media-breakpoint-down(md){
-
     }
   }
 }
