@@ -19,3 +19,5 @@ foreach($arResult['ITEMS'] as $key => $item)
         $arResult['ITEMS'][0]['ACTIVE_SLIDE'] = 'active';
     }
 }
+
+//dump($arResult['ITEMS']);

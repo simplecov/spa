@@ -69,7 +69,13 @@ $asset = Bitrix\Main\Page\Asset::getInstance();
 
         </header>
 
-<?if(!CSite::InDir('/gallery') && !CSite::InDir('/specials') && !CSite::InDir('/presents')):
+
+<?if(CSite::InDir('/index.php') ||
+    CSite::InDir('/spa-center') ||
+    CSite::InDir('/fitness-center') ||
+    CSite::InDir('/massage') ||
+    CSite::InDir('/beauty')
+):
     $APPLICATION->IncludeComponent("bitrix:news.list", "main-page-slider", Array(
         "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
         "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации

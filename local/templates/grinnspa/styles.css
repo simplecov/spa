@@ -9962,7 +9962,7 @@ Beauty open\close toggler animation
     #carouselMain .carousel-inner .carousel-item .carousel-caption {
       position: absolute;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       padding: 30px;
       width: 100%;
       bottom: 0;

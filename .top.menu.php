@@ -37,7 +37,7 @@ $aMenuLinks = Array(
     ),
     Array(
         "Подарочные сертификаты",
-        "/presents",
+        "/certificates",
         Array(),
         Array(),
         ""

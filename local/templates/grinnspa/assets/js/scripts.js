@@ -19,8 +19,6 @@ $(document).ready(function(){
         cursorborder: 0,
     });
 
-    console.log(location.pathname);
-
     /**
      * Obj init
      */
@@ -53,19 +51,6 @@ $(document).ready(function(){
      * Main page big slider
      */
     $('#carouselMain').height($(window).height());
-    // $('.header-big-slider').slick({
-    //     dots: false,
-    //     infinite: true,
-    //     speed: 1200,
-    //     fade: true,
-    //     adaptiveHeight: true,
-    //     autoplay: false,
-    //     cssEase: 'ease-in-out',
-    //     pauseOnFocus: true,
-    //     pauseOnHover: true,
-    //     pauseOnDotsHover: true,
-    //     initialSlide: 1,
-    // });
 });
 
 var header = {

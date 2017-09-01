@@ -1,7 +1,7 @@
 <?
-$sSectionName = 'Подарки';
+$sSectionName = 'Подарочные сертификаты';
 $arDirProperties = array(
-	'title' => 'Подарки',
+	'title' => 'Подарочные сертификаты',
 	'description' => 'Description',
 	'keywords' => 'Keywords',
 	'robots' => 'index, follow'
