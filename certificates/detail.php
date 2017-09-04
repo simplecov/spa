@@ -14,7 +14,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 		"ELEMENT_CODE" => "",	// Код новости
 		"CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
 		"FIELD_CODE" => array(	// Поля
-			0 => "",
+			0 => "DETAIL_PICTURE",
 			1 => "",
 		),
 		"PROPERTY_CODE" => array(	// Свойства

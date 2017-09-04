@@ -11,12 +11,17 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+//dump($arResult);
 ?>
 <div class="detail-page col-12">
     <div class="row">
 
         <div class="col-12">
             <h1 class="stylish-title animated"><?=$arResult['NAME']?></h1>
+        </div>
+
+        <div class="col-12">
+            <img class="img-fluid" src="<?=$arResult['DETAIL_PICTURE']['SRC']?>">gti add .
         </div>
 
         <div class="col-12">

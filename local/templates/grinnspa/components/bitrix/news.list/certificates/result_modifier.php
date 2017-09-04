@@ -2,7 +2,7 @@
 
 foreach($arResult['ITEMS'] as $key => $item)
 {
-    $image = CFile::resizeImageGet($item['PREVIEW_PICTURE'], array('height' => '200', 'width' => '400'), BX_RESIZE_IMAGE_EXACT);
+    $image = CFile::resizeImageGet($item['DETAIL_PICTURE'], array('height' => '200', 'width' => '400'), BX_RESIZE_IMAGE_EXACT);
     $arResult['ITEMS'][$key]['IMAGE'] = $image['src'];
 
     $arResult['ITEMS'][$key]['SERVICE_LIST'] = explode("\n", $item['PREVIEW_TEXT']);

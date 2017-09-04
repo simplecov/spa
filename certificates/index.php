@@ -25,7 +25,7 @@ $APPLICATION->SetTitle("Подарочные сертификаты");
 		"SORT_ORDER2" => "ASC",
 		"FILTER_NAME" => "",
 		"FIELD_CODE" => array(
-			0 => "",
+			0 => "DETAIL_PICTURE",
 			1 => "",
 		),
 		"PROPERTY_CODE" => array(
