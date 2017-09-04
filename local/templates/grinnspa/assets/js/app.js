@@ -19,34 +19,13 @@ angular
 //     }]);
 
 angular.module('app', [])
-    .controller('feedbackForm', ['$scope', function($scope) {
+    .controller('feedbackForm', ['$scope', function($scope, $http) {
         $scope.patternEmail = '/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/';
         $scope.patternPhone = '\d+';
 
         $scope.submit = function() {
-            $scope.msg = 'form is submitted';
+            $scope.msg = 'Форма в разработке, на данный момент сообщения не отсылаются';
+            $scope.formData = {};
+            console.log($scope.formData);
         };
-
-        // $scope.sendForm = function ($scope) {
-        //     $scope.msg = "Form Validated";
-        // };
     }]);
-
-
-// function validationCtrl($scope) { console.log('validated');
-//     var validUsername = "Тодорис Баис";
-//     var validEmail = "thodoris.bais@gmail.com";
-//
-//     $scope.reset = function(){
-//         $scope.username = validUsername;
-//         $scope.email = validEmail;
-//     }
-//
-//     $scope.checkData = function() {
-//         if ($scope.username != validUsername || $scope.email != validEmail) {
-//             alert("Предоставленные данные не совпадают с владельцем по умолчанию");
-//         } else {
-//             alert("Вроде нормально!");
-//         }
-//     }
-// }

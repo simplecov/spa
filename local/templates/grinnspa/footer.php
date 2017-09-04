@@ -109,7 +109,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                             </div>
                         </label>
                         <div class="col-12">
-                            <input class="form-control" type="text" name="name" ng-model="name" required>
+                            <input class="form-control" type="text" name="name" ng-model="formData.name" required>
                         </div>
                     </div>
 
@@ -122,7 +122,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                             </div>
                         </label>
                         <div class="col-12">
-                            <input class="form-control" type="number" name="phone" ng-model="phone" ng-pattern="patternPhone" required>
+                            <input class="form-control" type="number" name="phone" ng-model="formData.phone" ng-pattern="patternPhone" required>
                         </div>
                     </div>
 
@@ -135,7 +135,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                             </div>
                         </label>
                         <div class="col-12">
-                            <input class="form-control" type="email" name="email" ng-model="email" ng-pattern="patternEmail" required>
+                            <input class="form-control" type="email" name="email" ng-model="formData.email" ng-pattern="patternEmail" required>
                         </div>
                     </div>
 
@@ -148,11 +148,13 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                             </div>
                         </label>
                         <div class="col-12">
-                            <textarea class="form-control" type="text" name="textarea" ng-model="textarea" required></textarea>
+                            <textarea class="form-control" type="text" name="textarea" ng-model="formData.textarea" required></textarea>
                         </div>
                     </div>
 
-                    {{msg}}
+                    <div class="form-events">
+                        {{msg}}
+                    </div>
 
                     <div class="form-group btn-container">
                         <?\Simplecov\Helpres::createButton('submit', 'btn-pulse red round hover-pulse-stop', 'Написать')?>
