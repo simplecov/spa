@@ -2,10 +2,24 @@
 
 namespace Simplecov;
 
-use PHPMailer\PHPMailer\PHPMailer as mailer;
+require_once 'PHPMailer/PHPMailerAutoload.php';
 
-class SPAForm{
+class Form{
 
+    public $request;
+
+    public function getRequest()
+    {
+        return $this->request;
+    }
+
+    function checkData($request)
+    {
+
+    }
 }
 
-new SPAForm();
+new Form();
+
+
+dump($_REQUEST);

@@ -2,6 +2,7 @@
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 
+$logo = CFile::GetFileArray(COption::GetOptionString( "askaron.settings", "UF_LOGO" ));
 $asset = Bitrix\Main\Page\Asset::getInstance();
 ?>
 <!DOCTYPE html>
@@ -14,11 +15,14 @@ $asset = Bitrix\Main\Page\Asset::getInstance();
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/jquery-3.2.1.min.js')?>
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/jquery-migrate.min.js')?>
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/tether.min.js')?>
+        <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/angular.min.js')?>
+        <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/angular-route.min.js')?>
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/bootstrap.min.js')?>
 
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/plugins/jquery.nicescroll.min.js')?>
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/plugins/jquery.visible.min.js')?>
 
+        <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/app.js')?>
         <?$asset->addJs(SITE_TEMPLATE_PATH.'/assets/js/scripts.js')?>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +38,7 @@ $asset = Bitrix\Main\Page\Asset::getInstance();
             <div class="header-media">
                 <div class="logo">
                     <a href="/">
-                        <img class="img-fluid" src="<?=SITE_TEMPLATE_PATH?>/assets/images/spa-logo-tr.png">
+                        <img class="img-fluid" src="<?=$logo['SRC']?>">
                     </a>
                 </div>
 

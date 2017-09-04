@@ -1,0 +1,9 @@
+{
+  "name": "simplecov/spa",
+  "description": "Спа сайт на битриксе",
+  "keywords": ["grinnspa", "bitrix"],
+  "type": "project",
+  "require": {
+    "php": ">=5.4.0"
+  }
+}
