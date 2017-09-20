@@ -21,16 +21,18 @@ $this->setFrameMode(true);
         </div>
 
         <div class="col-12">
-            <img class="img-fluid" src="<?=$arResult['DETAIL_PICTURE']['SRC']?>">gti add .
+            <img class="img-fluid" src="<?=$arResult['DETAIL_PICTURE']['SRC']?>">
         </div>
 
         <div class="col-12">
             <p>
                 <?=$arResult['PREVIEW_TEXT']?>
             </p>
-            <p>
-                <?=$arResult['DETAIL_TEXT']?>
-            </p>
+            <?if(strlen($arResult['DETAIL_TEXT']) > 0):?>
+                <p>
+                    <?=$arResult['DETAIL_TEXT']?>
+                </p>
+            <?endif?>
         </div>
 
         <div class="col-12">

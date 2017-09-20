@@ -10016,6 +10016,9 @@ Beauty open\close toggler animation
     .services-main-page .card .card-block .card-button {
       display: inline-block; }
 
+.detail-page .img-fluid {
+  margin-bottom: 15px; }
+
 .services .card {
   margin-bottom: 30px;
   border-radius: 20px;

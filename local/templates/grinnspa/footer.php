@@ -96,71 +96,25 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             </div>
             <div class="modal-body row">
 
-
-
-                <form id="linked-form" name="feedbackForm" ng-controller="feedbackForm" class="form col-12" ng-submit="submit()">
-
-                    <div class="form-group row">
-                        <label for="example-search-input" class="col-12 col-form-label">
-                            Ваше имя
-                            <div role="alert">
-                                <span class="error" ng-show="feedbackForm.name.$error.required">не заполнено</span>
-                                <span class="error" ng-show="feedbackForm.name.$error.text">не прошло проверку</span>
-                            </div>
-                        </label>
-                        <div class="col-12">
-                            <input class="form-control" type="text" name="name" ng-model="formData.name" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="example-search-input" class="col-12 col-form-label">
-                            Ваш телефон
-                            <div role="alert">
-                                <span class="error" ng-show="feedbackForm.phone.$error.required">не заполнен</span>
-                                <span class="error" ng-show="feedbackForm.phone.$error.number">не прошел проверку</span>
-                            </div>
-                        </label>
-                        <div class="col-12">
-                            <input class="form-control" type="number" name="phone" ng-model="formData.phone" ng-pattern="patternPhone" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label class="col-12 col-form-label">
-                            Ваша почта
-                            <div role="alert">
-                                <span class="error" ng-show="feedbackForm.email.$error.required">не заполнена</span>
-                                <span class="error" ng-show="feedbackForm.email.$error.email">не прошла проверку</span>
-                            </div>
-                        </label>
-                        <div class="col-12">
-                            <input class="form-control" type="email" name="email" ng-model="formData.email" ng-pattern="patternEmail" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="example-search-input" class="col-12 col-form-label">
-                            Ваше сообщение
-                            <div role="alert">
-                                <span class="error" ng-show="feedbackForm.textarea.$error.required">не заполнено</span>
-                                <span class="error" ng-show="feedbackForm.textarea.$error.text">не прошло проверку</span>
-                            </div>
-                        </label>
-                        <div class="col-12">
-                            <textarea class="form-control" type="text" name="textarea" ng-model="formData.textarea" required></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-events">
-                        {{msg}}
-                    </div>
-
-                    <div class="form-group btn-container">
-                        <?\Simplecov\Helpres::createButton('submit', 'btn-pulse red round hover-pulse-stop', 'Написать')?>
-                    </div>
-                </form>
-
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.feedback",
+                    "feedback",
+                    array(
+                        "COMPONENT_TEMPLATE" => "feedback",
+                        "USE_CAPTCHA" => "Y",
+                        "OK_TEXT" => "Спасибо, ваше сообщение принято.",
+                        "EMAIL_TO" => "1kbspeed@gmail.com",
+                        "REQUIRED_FIELDS" => array(
+                            0 => "NAME",
+                            1 => "EMAIL",
+                            2 => "MESSAGE",
+                        ),
+                        "EVENT_MESSAGE_ID" => array(
+                            0 => "7",
+                        )
+                    ),
+                    false
+                );?>
 
             </div>
         </div>
