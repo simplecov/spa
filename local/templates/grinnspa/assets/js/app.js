@@ -11,37 +11,38 @@ angular
  * Description: Устанавливаем первоначальное состояние приложения
  */
 angular.module('app', [])
-    .controller('feedbackForm', ['$scope', function($scope, $http) {
+.controller('feedbackForm', ['$scope', '$http', function($scope, $http) {
 
-        $scope.submit = function() {
-            console.log($scope.feedbackForm);
-            if ( $scope.feedbackForm.$valid ) {
-                $scope.msg = 'Форма валидна';
+    $scope.submit = function() {
+        if ( $scope.feedbackForm.$valid ) {
 
-                $http.post(
-                    '/local/ajax/feedback.php',
-                    $scope.user_name
-                ).success(function( res ){
+            $scope.msg = 'Письмо отправляется';
 
-                    $scope.msg = 'Сообщение отправлено';
+            var formData = {
+                'name' : $scope.feedbackForm.user_name.$viewValue,
+                'email' : $scope.feedbackForm.user_email.$viewValue,
+                'message' : $scope.feedbackForm.message.$viewValue
+            };
 
-                }).error(function(err){
-
-                    $scope.msg = 'Форма в разработке, на данный момент сообщения не отправляются';
-
-                });
-            }
-            else
-            {
-                $scope.msg = 'Форма невалидна';
-            }
+            $http({
+                method: 'POST',
+                url: '/local/php_interface/include/LovelyForm.php',
+                data: formData
+            }).
+            then(function(request) {
+                $scope.LetterSend = request.data;
+                if($scope.LetterSend === 'y')
+                    $scope.msg = 'Письмо успешно отправлено';
+                else
+                    $scope.msg = 'При отправке сообщения возникла непредвиденная ошибка. Пожалуйста, попробуйте еще раз через несколько секунд.';
+            }, function(response) {
+                $scope.msg = 'Запрос безуспешен';
+            });
         }
+        else
+        {
+            $scope.msg = 'В данные формы закралась ошибка';
+        }
+    }
 
-
-        // $http.post({
-        //     method: 'POST',
-        //     url: '/local/php_interface/include/mail.php'
-        // }).succes(function(data){
-        //     $('.form-events').append('data');
-        // });
-    }]);
+}]);
