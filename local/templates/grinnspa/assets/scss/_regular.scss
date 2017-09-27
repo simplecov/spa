@@ -1,6 +1,7 @@
 body{
   color: $text-color1;
   background: $main-color2;
+  overflow-x: hidden;
 
   h1,h2,h3,h4,h5,h6{
     margin-bottom: 15px;
@@ -14,8 +15,10 @@ body{
     text-transform: uppercase;
   }
 
-  .marked-price{
-
+  .wrapper{
+    @include media-breakpoint-up(md){
+      margin-top: 40px;
+    }
   }
 
   .logo{
@@ -143,6 +146,10 @@ body{
     text-transform: uppercase;
 
     @include transitionOptions(all, .3s, ease-in-out);
+
+    @include media-breakpoint-down(sm){
+      font-size: 26px !important;
+    }
 
     &:before{
       content: '[ ';

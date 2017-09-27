@@ -1,9 +1,14 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-//dump($arResult);
 ?>
 
 <?if (!empty($arResult)):?>
     <ul id="main-menu" class="main-menu">
+
+        <?if(!CSite::InDir('/index.php')):?>
+            <li>
+                <a href="/" class="to-main">На главную</a>
+            </li>
+        <?endif?>
 
         <?
         foreach($arResult as $arItem):

@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 ?>
 
-<div id="carouselMain" class="carousel slide header-big-slider" data-ride="carousel">
+<div id="carouselMain" class="carousel slide promo-slider header-big-slider" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
         <?foreach($arResult["ITEMS"] as $arItem):
             $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -21,11 +21,19 @@ $this->setFrameMode(true);
             $id = $this->GetEditAreaId($arItem['ID']);
             ?>
 
-            <div class="carousel-item <?=$arItem['ACTIVE_SLIDE']?>" style="background-image: url(<?=$arItem['IMAGE']?>);">
+            <div class="carousel-item <?if($arItem['PROPERTIES']['THIS_FIRST']['VALUE'] === 'Y'):?> active<?endif?>" style="background-image: url(<?=$arItem['IMAGE']?>);">
+
+                <p class="promo-text">
+                    <?=$arItem['PREVIEW_TEXT']?>
+                </p>
+
                 <div class="carousel-caption">
-                    <h2 class="content-title stylish-title"><?=$arItem['NAME']?></h2>
-                    <?\Simplecov\Helpres::createButton('link', 'slide-btn btn-pulse red round hover-pulse-stop', 'Смотреть', '', '/'.$arItem['CODE'])?>
+                    <h2 class="content-title stylish-title" style="font-size: <?=$arItem['FONT_SIZE']?>;">
+                        <?=$arItem['NAME']?>
+                    </h2>
+                    <?\Simplecov\Helpres::createButton('link', 'slide-btn btn-pulse red round hover-pulse-stop', 'Смотреть', '', $arItem['PROPERTIES']['LINK']['VALUE'])?>
                 </div>
+
             </div>
 
         <?endforeach?>

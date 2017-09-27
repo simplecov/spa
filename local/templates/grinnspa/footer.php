@@ -17,9 +17,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                         <ul>
                             <li>г.Орел, Кромское шоссе 4</li>
                             <li>
-                                <a class="regular-link" href="callto:44-01-67">44-01-67</a>
+                                <a class="regular-link" href="callto:<?=COption::GetOptionString( "askaron.settings", "UF_PHONE_1" );?>"><?=COption::GetOptionString( "askaron.settings", "UF_PHONE_1" );?></a>
                                 <span class="marked">|</span>
-                                <a class="regular-link" href="callto:49-53-20">49-53-20</a>
+                                <a class="regular-link" href="callto:<?=COption::GetOptionString( "askaron.settings", "UF_PHONE_2" );?>"><?=COption::GetOptionString( "askaron.settings", "UF_PHONE_2" );?></a>
                             </li>
                             <li>
                                 <a class="regular-link" href="http://www.tmk-grinn.ru/" target="_blank">www.tmk-grinn.ru</a>

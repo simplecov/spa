@@ -9366,7 +9366,8 @@ Regular
  */
 body {
   color: rgba(0, 52, 101, 0.75);
-  background: #fff5d8; }
+  background: #fff5d8;
+  overflow-x: hidden; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     margin-bottom: 15px; }
   body p {
@@ -9374,6 +9375,9 @@ body {
   body .marked {
     font-weight: 800;
     text-transform: uppercase; }
+  @media (min-width: 768px) {
+    body .wrapper {
+      margin-top: 40px; } }
   @media (max-width: 991px) {
     body .logo {
       width: 50%; } }
@@ -9548,6 +9552,9 @@ body {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
+    @media (max-width: 767px) {
+      body .stylish-title {
+        font-size: 26px !important; } }
     body .stylish-title:before {
       content: '[ '; }
     body .stylish-title:after {
@@ -9721,11 +9728,16 @@ section {
   @media (max-width: 767px) {
     .header-container {
       position: relative; } }
+  .header-container .header-link {
+    font-weight: 700;
+    font-size: 22px; }
   .header-container .header-media {
     padding: 10px;
     height: 100px;
     display: flex;
     position: relative;
+    background: rgba(255, 245, 216, 0.8);
+    justify-content: center;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
@@ -9737,11 +9749,15 @@ section {
     .header-container .header-media.resized {
       height: 70px;
       background: #fff5d8; }
-  .header-container .logo {
-    position: relative;
-    margin: auto 0;
-    float: left;
-    z-index: 10; }
+    .header-container .header-media .logo {
+      position: relative;
+      margin: auto 0;
+      z-index: 10; }
+    .header-container .header-media .header-phone {
+      position: absolute;
+      left: 0;
+      top: 25px;
+      padding: 0 30px; }
 
 .header-wrapper {
   min-height: 120px; }
@@ -9859,33 +9875,53 @@ Beauty open\close toggler animation
   left: 50%; }
 
 .main-menu {
-  position: absolute;
+  position: relative;
   width: 100%;
   display: block;
-  text-align: left;
   background: #41a7c1;
   padding: 15px;
-  max-height: 60px;
   margin: 0;
-  visibility: hidden;
-  top: 0;
-  opacity: 0;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
-  .main-menu.main-menu-shown {
-    visibility: visible;
-    top: 100%;
-    opacity: 1;
-    z-index: 1; }
+  text-align: center; }
+  @media (max-width: 767px) {
+    .main-menu {
+      position: absolute;
+      width: 100%;
+      display: block;
+      text-align: left;
+      background: #41a7c1;
+      padding: 15px;
+      max-height: 60px;
+      margin: 0;
+      visibility: hidden;
+      top: 0;
+      opacity: 0;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -ms-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+      .main-menu.main-menu-shown {
+        visibility: visible;
+        top: 100%;
+        opacity: 1;
+        z-index: 1; } }
   .main-menu li {
     list-style-type: none;
     display: inline-block; }
+    .main-menu li .to-main {
+      color: #003465; }
+      .main-menu li .to-main:focus, .main-menu li .to-main:active, .main-menu li .to-main:visited {
+        color: #003465;
+        outline: 0 !important;
+        text-decoration: none; }
+      @media (min-width: 768px) {
+        .main-menu li .to-main {
+          border-right: 1px solid white; } }
     .main-menu li.selected {
-      background: #e00920;
+      border-bottom: 2px solid rgba(0, 52, 101, 0.75);
       border-radius: 10px; }
+      .main-menu li.selected a {
+        color: rgba(0, 52, 101, 0.75) !important; }
     .main-menu li a {
       color: white;
       font-family: 'DINPro-Regular';
@@ -9960,6 +9996,19 @@ Beauty open\close toggler animation
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
 
+#carouselMain.promo-slider .carousel-caption .content-title {
+  color: white !important;
+  text-shadow: 2px 2px 8px black; }
+  @media (max-width: 767px) {
+    #carouselMain.promo-slider .carousel-caption .content-title {
+      font-size: 20px !important; } }
+@media (max-width: 767px) {
+  #carouselMain.promo-slider .carousel-caption {
+    display: inline-block !important; }
+    #carouselMain.promo-slider .carousel-caption .content-title {
+      display: inline-block;
+      width: 100%;
+      margin: 0; } }
 #carouselMain .carousel-inner {
   height: 100%;
   width: 100%; }
@@ -9975,7 +10024,7 @@ Beauty open\close toggler animation
       justify-content: center;
       padding: 30px;
       width: 100%;
-      bottom: 0;
+      bottom: 250px;
       font-size: 20px;
       left: 0; }
       #carouselMain .carousel-inner .carousel-item .carousel-caption .content-title {
@@ -9986,6 +10035,17 @@ Beauty open\close toggler animation
             font-size: 130%; } }
       #carouselMain .carousel-inner .carousel-item .carousel-caption .slide-btn {
         margin: auto 10px; }
+    #carouselMain .carousel-inner .carousel-item .promo-text {
+      position: absolute;
+      background: white;
+      bottom: 200px;
+      width: 100%;
+      text-align: center;
+      padding: 15px;
+      margin: 0; }
+      @media (max-width: 767px) {
+        #carouselMain .carousel-inner .carousel-item .promo-text {
+          bottom: 100px; } }
 
 .services-main-page .card {
   margin-bottom: 30px;

@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+    Array(
+        "Услуги",
+        "/fitness-center/services",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Абонементы",
+        "/fitness-center/subscription",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Расписание",
+        "/fitness-center/schedule",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Команда",
+        "/fitness-center/team",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Запись",
+        "/fitness-center/order",
+        Array(),
+        Array(),
+        ""
+    ),
+);
+?>

@@ -4,20 +4,17 @@ $dirName = preg_replace('/\//', '', $page);
 
 foreach($arResult['ITEMS'] as $key => $item)
 {
+    /**
+     * Preview picture
+     */
     $image = CFile::resizeImageGet($item['PREVIEW_PICTURE'], array('height' => '1080', 'width' => '1920'), BX_RESIZE_IMAGE_PROPORTIONAL);
     $arResult['ITEMS'][$key]['IMAGE'] = $image['src'];
 
-    $arResult['ITEMS_CODE'][] = $item['CODE'];
-}
+    $arResult['ITEMS'][$key]['LINK'] = $item['PROPERTIES']['LINK']['VALUE'];
 
-foreach($arResult['ITEMS'] as $key => $item)
-{
-    if($dirName == $item['CODE'])
-        $arResult['ITEMS'][$key]['ACTIVE_SLIDE'] = 'active';
-    elseif(!in_array($dirName, $arResult['ITEMS_CODE']))
-    {
-        $arResult['ITEMS'][0]['ACTIVE_SLIDE'] = 'active';
-    }
+    /**
+     * Bla-bla-bla
+     */
+    $arResult['ITEMS'][$key]['FONT_SIZE'] = (preg_replace('/\D/', '', $item['PROPERTIES']['TEXT_SIZE']['VALUE']) * 100) . '%';
 }
-
 //dump($arResult['ITEMS']);

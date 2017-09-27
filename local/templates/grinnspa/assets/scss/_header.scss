@@ -7,11 +7,18 @@
     position: relative;
   }
 
+  .header-link{
+    font-weight: 700;
+    font-size: 22px;
+  }
+
   .header-media{
     padding: 10px;
     height: 100px;
     display: flex;
     position: relative;
+    background: transparentize($menu-bg, .2);
+    justify-content: center;
 
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -27,13 +34,19 @@
       height: 70px;
       background: $menu-bg;
     }
-  }
-  
-  .logo{
-    position: relative;
-    margin: auto 0;
-    float: left;
-    z-index: 10;
+
+    .logo{
+      position: relative;
+      margin: auto 0;
+      z-index: 10;
+    }
+
+    .header-phone{
+      position: absolute;
+      left: 0;
+      top: 25px;
+      padding: 0 30px;
+    }
   }
 }
 
@@ -100,6 +113,9 @@
 /**
 Beauty open\close toggler animation
  */
+@include media-breakpoint-down(md){
+
+}
 #nav-icon3{
   width: 60px;
   height: 45px;
