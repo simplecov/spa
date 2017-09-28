@@ -33,6 +33,9 @@ function createPriceString($props = array())
     $countPrices = 0;
     foreach ($props as $value)
     {
+        if(strlen($value) <= 0)
+            continue;
+
         $value .= ' <span class="ruble">&#8381;</span>';
         if($countPrices == 0)
             $result .= $value;

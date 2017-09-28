@@ -47,13 +47,14 @@
         text-decoration: none;
       }
       @include media-breakpoint-up(md){
-        border-right: 1px solid white;
+        border-right: 1px solid rgb(0, 52, 101);
       }
     }
 
     &.selected{
       border-bottom: 2px solid $text-color1;
       border-radius: 10px;
+      background: transparentize(white, .5);
 
       a{
         color: $text-color1 !important;
@@ -67,6 +68,10 @@
       font-size: 14px;
       font-weight: 800;
       text-transform: uppercase;
+
+      &:not(.selected){
+
+      }
 
       &:hover{
         text-decoration: none;

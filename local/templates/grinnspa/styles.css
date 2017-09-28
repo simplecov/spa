@@ -9916,10 +9916,11 @@ Beauty open\close toggler animation
         text-decoration: none; }
       @media (min-width: 768px) {
         .main-menu li .to-main {
-          border-right: 1px solid white; } }
+          border-right: 1px solid #003465; } }
     .main-menu li.selected {
       border-bottom: 2px solid rgba(0, 52, 101, 0.75);
-      border-radius: 10px; }
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.5); }
       .main-menu li.selected a {
         color: rgba(0, 52, 101, 0.75) !important; }
     .main-menu li a {

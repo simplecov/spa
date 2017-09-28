@@ -76,6 +76,11 @@ class Helpres{
     {
         echo SITE_TEMPLATE_PATH . '/assets/images' . $src;
     }
+
+    function includeSlider($type, $const)
+    {
+
+    }
 }
 
 global $helper;
