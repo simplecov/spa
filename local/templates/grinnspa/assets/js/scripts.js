@@ -53,6 +53,11 @@ $(document).ready(function(){
     $('#carouselMain').height($(window).height());
 });
 
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+
 var header = {
 
     selector: null,
@@ -145,10 +150,11 @@ var header = {
      */
     scrollToTop: function()
     {
-        $('body').animate(
+        $('html, body').animate(
             {scrollTop: 0},
             '300'
         );
+        console.log('scroll');
     },
 
     /**

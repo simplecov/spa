@@ -10134,4 +10134,30 @@ Beauty open\close toggler animation
   .gallery a img {
     border-radius: 20px; }
 
+.team .card {
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 30px; }
+  .team .card .card-block .team-img {
+    border-radius: 20px;
+    margin-bottom: 15px; }
+  .team .card .card-block .team-text {
+    margin: 0; }
+  .team .card .card-block .team-list {
+    padding-left: 30px; }
+    .team .card .card-block .team-list li {
+      position: relative;
+      display: block;
+      list-style-type: none;
+      margin-bottom: 5px;
+      color: rgba(0, 52, 101, 0.75);
+      font-size: 20px;
+      line-height: 22px; }
+      .team .card .card-block .team-list li:before {
+        content: "";
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: -28px;
+        top: 2px; }
+
 /*# sourceMappingURL=styles.css.map */

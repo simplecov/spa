@@ -3,14 +3,14 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("Команда Фитнес-центра «Гринн SPA»");
 ?>
 
-<section class="services">
+<section class="team">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h1 class="stylish-title animated"><?=$APPLICATION->GetTitle();?></h1>
             </div>
 
-            <?$APPLICATION->IncludeComponent("bitrix:news.list", "services", Array(
+            <?$APPLICATION->IncludeComponent("bitrix:news.list", "team", Array(
                 "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
                 "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
                 "AJAX_MODE" => "N",	// Включить режим AJAX
@@ -64,9 +64,9 @@ $APPLICATION->SetTitle("Команда Фитнес-центра «Гринн SP
                 "SET_STATUS_404" => "N",	// Устанавливать статус 404
                 "SET_TITLE" => "N",	// Устанавливать заголовок страницы
                 "SHOW_404" => "N",	// Показ специальной страницы
-                "SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+                "SORT_BY1" => "ID",	// Поле для первой сортировки новостей
                 "SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
-                "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+                "SORT_ORDER1" => "ASC",	// Направление для первой сортировки новостей
                 "SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
                 "STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
             ),

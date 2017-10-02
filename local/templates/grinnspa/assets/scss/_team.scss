@@ -1,0 +1,42 @@
+.team{
+
+  .card{
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 30px;
+
+    .card-block{
+
+      .team-img{
+        border-radius: 20px;
+        margin-bottom: 15px;
+      }
+
+      .team-text{
+        margin: 0;
+      }
+
+      .team-list{
+        padding-left: 30px;
+
+        li{
+          position: relative;
+          display: block;
+          list-style-type: none;
+          margin-bottom: 5px;
+          color: $text-color1;
+          font-size: 20px;
+          line-height: 22px;
+
+          &:before{
+            content: $fa-var-caret-left;
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: -28px;
+            top: 2px;
+          }
+        }
+      }
+    }
+  }
+}

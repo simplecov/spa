@@ -83,6 +83,8 @@ $asset = Bitrix\Main\Page\Asset::getInstance();
                 false
             );?>
 
+
+
         </header>
 
 <?if(CSite::InDir('/index.php')):
